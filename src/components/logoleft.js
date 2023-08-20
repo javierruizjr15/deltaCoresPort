@@ -6,12 +6,12 @@ const LogoLeft = () => {
     
     return (
         <>
-                    <div className="column flex-top-left">
-                        <img 
-                            src={deltacoreslogo} 
-                            alt="delta cores logo" 
-                            style={{ width: "36px", height: "72px" }} 
-                            /> 
+                <div className="column flex-top-left">
+                    <img 
+                        src={deltacoreslogo} 
+                        alt="delta cores logo" 
+                        style={{ width: "36px", height: "72px" }} 
+                        /> 
                 </div>
         </>
     )

@@ -77,3 +77,15 @@ code {
   width: 100%;
   height: 100%;
 }
+
+.about-column {
+  flex: 6;
+}
+
+.work-column {
+  flex: 6;
+}
+
+.contact-column {
+  flex: 6;
+}

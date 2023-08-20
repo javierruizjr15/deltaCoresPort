@@ -9,7 +9,7 @@ const Contact = () => {
         <>
             <div className="home-page">
                 <LogoLeft />
-                <div className="column menu-item">
+                <div className="column menu-item contact-column">
                     <p>
                         Hit me up B
                     </p>

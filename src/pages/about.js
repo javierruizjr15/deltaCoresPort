@@ -9,15 +9,15 @@ const About = () => {
         <>
             <div className="home-page">
                 <LogoLeft />
-                <div className="column menu-item">
+                <div className="column menu-item about-column">
                     <p>
-                        Blah Blah I am awesome
+                        <p>About</p>
                     </p>
                 </div>
-                <NavRight />
+                    <NavRight />
             </div>
         </>
-
+ 
     );
 };
 

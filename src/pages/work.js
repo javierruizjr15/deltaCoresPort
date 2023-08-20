@@ -9,7 +9,7 @@ const Work = () => {
         <>
             <div className="home-page">
                 <LogoLeft />
-                <div className="column menu-item">
+                <div className="column menu-item work-column">
                     <p>
                         Twerk it!
                     </p>
