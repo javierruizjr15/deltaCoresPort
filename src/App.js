@@ -6,12 +6,14 @@ import Work from "./pages/work";
 import Contact from "./pages/contact";
 import BackgroundSlider from "./components/backgroundSlider";
 import Tester from "./pages/tester";
+import Platonics from "./components/platonics";
 
 const App = () => {
   return (
     <>
       <BackgroundSlider>
         <Routes>
+          <Route path="/platonics" element={<Platonics />} /> 
           <Route path="/tester" element={<Tester />} /> 
           <Route path="/" element={<Home />} /> 
           <Route path="/about" element={<About />} /> 
