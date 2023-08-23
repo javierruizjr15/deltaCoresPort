@@ -1,11 +1,11 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -25,7 +25,7 @@ code {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    /* z-index: -1; (might not be needed after all) */
 }
 
 .column {
@@ -89,3 +89,81 @@ code {
 .contact-column {
   flex: 6;
 }
+
+/* (might not need this after all)
+.logo-left, .menu-items, .nav-right {
+  position: relative;
+  /* z-index: 10; Just to make sure they are above the background 
+} 
+*/
+
+/* platonics componet */
+body {
+  background: #666;
+  margin: 0;
+  overflow: hidden;
+}
+canvas {
+  height: 100vh;
+  width: 100vw;
+  touch-action: none;
+}
+.osc {
+  left: 0px;
+  position: fixed;
+  top: 0px;
+}
+
+.button {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+}
+.controls {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+}
+.playpause {
+  background: #AAB;
+  padding: 10px;
+}
+.playpause label {
+  display: block;
+  box-sizing: border-box;
+
+  width: 0;
+  height: 20px;
+
+  cursor: pointer;
+
+  border-color: transparent transparent transparent #202020;
+  transition: 100ms all ease;
+  will-change: border-width;
+
+  border-style: double;
+  border-width: 0px 0 0px 20px;
+}
+.playpause input[type='checkbox'] {
+  visibility: hidden;
+}
+.playpause.checked label {
+  border-style: double;
+  border-width: 0px 0 0px 20px;
+}
+.playpause label {
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+}
+
+.platonics-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* z-index: -1; ensure it stays behind other elements (not working as expected) */
+}
+

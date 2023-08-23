@@ -11,7 +11,7 @@ import Platonics from "./components/platonics";
 const App = () => {
   return (
     <>
-      <BackgroundSlider>
+      {/* <BackgroundSlider> */}
         <Routes>
           <Route path="/platonics" element={<Platonics />} /> 
           <Route path="/tester" element={<Tester />} /> 
@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/work" element={<Work />} /> 
           <Route path="/contact" element={<Contact />} /> 
         </Routes>
-      </BackgroundSlider>
+      {/* </BackgroundSlider> */}
     </>
   )
 }

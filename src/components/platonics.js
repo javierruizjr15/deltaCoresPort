@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { Vec2, Vec3, Mat2, Mat3, Mat4, Quat } from 'https://cdn.skypack.dev/wtc-math';
 import gifJs from 'https://cdn.skypack.dev/gif.js';
-import '../platonics.css';
+import '../index.css';
 
-const Platonics = () => {
+const Platonics = ({ children }) => {
 
     
-    console.clear();
+    // console.clear();
     
     // Determine whether a number is a power of 2
     function powerOf2(v) {
@@ -1308,7 +1308,13 @@ const Platonics = () => {
       
       requestAnimationFrame(run);
     }
-    }
+    };
+
+    return (
+        <div className="platonics-background">
+            {children}
+        </div>
+    );
 };
 
 export default Platonics;
