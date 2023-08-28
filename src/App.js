@@ -7,12 +7,14 @@ import Contact from "./pages/contact";
 import BackgroundSlider from "./components/backgroundSlider";
 import Tester from "./pages/tester";
 import Platonics from "./components/platonics";
+import Polygon from "./components/polygon";
 
 const App = () => {
   return (
     <>
       {/* <BackgroundSlider> */}
         <Routes>
+          <Route path="/polygon" element={<Polygon />} /> 
           <Route path="/platonics" element={<Platonics />} /> 
           <Route path="/tester" element={<Tester />} /> 
           <Route path="/" element={<Home />} /> 
