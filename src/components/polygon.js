@@ -913,7 +913,7 @@ const FRAGMENT_SHADER = `
 `
 
 //Initialize components state and refs in the constructor.
-const Polygon = () => {
+const Polygon = ({ children }) => {
   useEffect(() => {
 
     console.clear();
@@ -1028,8 +1028,13 @@ const Polygon = () => {
     }, []);
 
     return (
-        <canvas id="webgl" width="500" height="1758"></canvas>
-    );
+      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+      <canvas id="webgl" width="500" height="1758" style={{ display: 'block' }}></canvas>
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
+        {children}
+      </div>
+    </div>
+  );
 }
 
 export default Polygon;
