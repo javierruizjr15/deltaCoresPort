@@ -168,3 +168,9 @@ canvas {
   /* z-index: -1; ensure it stays behind other elements (not working as expected) */
 }
 
+.carousel-conatiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 100% of the viewport height */
+}
