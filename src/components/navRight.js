@@ -7,12 +7,16 @@ const NavRight = () => {
     return (
         <>
             <div className="column nav-item ">
-                <p className="flex-top-right">
-                    <Link to="/" className="white-link">Home</Link>
-                </p>
-                <p className="flex-bottom-right">
-                    Audio Icon
-                </p>
+                <div>
+                    <p className="flex-top-right">
+                        <Link to="/" className="white-link">Home</Link>
+                    </p>
+                </div>
+                <div>
+                    <p className="flex-bottom-right">
+                        Audio Icon
+                    </p>
+                </div>
             </div>
         </>
     )

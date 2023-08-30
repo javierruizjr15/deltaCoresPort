@@ -68,6 +68,18 @@ code {
   justify-content: center;
 }
 
+.flex-top-right {
+  align-self: flex-start;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.flex-bottom-right {
+  align-self: flex-start;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
 .white-link {
   color: whitesmoke;
 }

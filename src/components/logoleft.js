@@ -7,7 +7,6 @@ const LogoLeft = () => {
     return (
         <>
                 <div className="column">
-                    
                     <div className="flex-top-left"> 
                         <img 
                         src={deltacoreslogo} 
