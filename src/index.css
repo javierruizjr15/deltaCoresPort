@@ -168,9 +168,22 @@ canvas {
   /* z-index: -1; ensure it stays behind other elements (not working as expected) */
 }
 
-.carousel-conatiner {
+.carousel-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* 100% of the viewport height */
+  height: 75vh;    /* 75% of the viewport height */
+  width: 100vh;     /* Make it a square using vh units for width */
+  margin: auto;    /* Auto margins help centering */
+  position: absolute; /* To perfectly center using top, right, bottom, left */
+  top: 0; right: 0; bottom: 0; left: 0;
+  /* overflow: hidden; */
+}
+
+.carousel-control-prev {
+  left: -25%; /* Adjust this value as per your design needs */
+}
+
+.carousel-control-next {
+  right: -25%; /* Adjust this value as per your design needs */
 }

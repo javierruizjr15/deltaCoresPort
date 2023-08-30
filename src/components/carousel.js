@@ -2,7 +2,7 @@ import React from "react";
 import '../index.css';
 import trippyPlanet from "../images/trippyplanet.png";
 import freyaEarth from "../images/FreyaEarth.png";
-import freyaPinkFloyd from "../images/FreyaPinkFloyd3.png";
+import freyaPinkFloyd from "../images/FreyaPinkFloyd4.png";
 
 
 
@@ -10,10 +10,10 @@ const Carousel = () => {
 
     return (
         <>
-        <div className="carousel-conatiner">
+        <div className="carousel-container">
 
             
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="false">
+            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="false">
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
