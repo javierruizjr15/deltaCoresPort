@@ -1,6 +1,6 @@
 import React from "react";
 import '../index.css'; 
-import deltacoreslogo from "../images/deltacoreslogo.jpeg";
+import deltacoreslogo from "../images/DCSpiral3white_Layer 1.png";
 
 const LogoLeft = () => {
     
@@ -10,7 +10,7 @@ const LogoLeft = () => {
                     <img 
                         src={deltacoreslogo} 
                         alt="delta cores logo" 
-                        style={{ width: "36px", height: "72px" }} 
+                        style={{ width: "72px", height: "72px" }} 
                         /> 
                 </div>
         </>
