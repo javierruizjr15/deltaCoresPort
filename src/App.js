@@ -9,6 +9,7 @@ import Tester from "./pages/tester";
 // import Platonics from "./components/platonics";
 // import Polygon from "./components/polygon";
 import Carousel from "./components/carousel";
+import RefractedRays from "./components/refractedRays";
 
 
 
@@ -17,10 +18,11 @@ const App = () => {
     <>
       {/* <BackgroundSlider> */}
         <Routes>
-          <Route path="/carousel" element={<Carousel />} /> 
+          {/* <Route path="/carousel" element={<Carousel />} />  */}
           {/* <Route path="/polygon" element={<Polygon />} />  */}
           {/* <Route path="/platonics" element={<Platonics />} />  */}
-          <Route path="/tester" element={<Tester />} /> 
+          {/* <Route path="/tester" element={<Tester />} />  */}
+          <Route path="/refractedrays" element={<RefractedRays />} /> 
           <Route path="/" element={<Home />} /> 
           <Route path="/about" element={<About />} /> 
           <Route path="/work" element={<Work />} /> 
