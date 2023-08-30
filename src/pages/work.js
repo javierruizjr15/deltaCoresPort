@@ -1,6 +1,6 @@
 import React from "react";
 import '../index.css';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import LogoLeft from "../components/logoleft";
 import NavRight from "../components/navRight";
 import BackgroundSlider from "../components/backgroundSlider";

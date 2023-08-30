@@ -12,7 +12,7 @@ class BackgroundSlider extends Component {
     ];
 
     componentDidMount() {
-        this.interval = setInterval(this.changeImage, 100); //change every second
+        this.interval = setInterval(this.changeImage, 100); //change every x seconds
     }
 
     componentWillUnmount() {

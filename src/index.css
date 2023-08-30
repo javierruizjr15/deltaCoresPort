@@ -45,6 +45,10 @@ code {
   justify-content: center;
   align-items: center;
   font-size: 36px;
+  user-select: none;
+    -webkit-user-select: none;  /* For Safari and Chrome */
+    -moz-user-select: none;     /* For Firefox */
+    -ms-user-select: none;
 }
 
 .nav-item {
@@ -54,6 +58,10 @@ code {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  user-select: none;
+    -webkit-user-select: none;  /* For Safari and Chrome */
+    -moz-user-select: none;     /* For Firefox */
+    -ms-user-select: none;
 }
 
 .flex-top-left {
