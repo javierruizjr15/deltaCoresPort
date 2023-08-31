@@ -21,7 +21,7 @@ const Carousel = () => {
                 </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                    <img className="d-block w-100" src={ trippyPlanet } alt="First slide" />
+                    <img className="d-block w-100" src={ freyaPinkFloyd } alt="First slide" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Trippy Planet</h5>
                     </div>
@@ -33,7 +33,7 @@ const Carousel = () => {
                     </div>
                     </div>
                     <div className="carousel-item">
-                    <img className="d-block w-100" src={ freyaPinkFloyd } alt="Third slide" />
+                    <img className="d-block w-100" src={ trippyPlanet } alt="Third slide" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Freya Pink Floyd</h5>
                     </div>
