@@ -5,11 +5,12 @@ import About from "./pages/about";
 import Work from "./pages/work";
 import Contact from "./pages/contact";
 // import BackgroundSlider from "./components/backgroundSlider";
-import Tester from "./pages/tester";
+// import Tester from "./pages/tester";
 // import Platonics from "./components/platonics";
 // import Polygon from "./components/polygon";
-import Carousel from "./components/carousel";
-import RefractedRays from "./components/refractedRays";
+// import Carousel from "./components/carousel";
+// import RefractedRays from "./components/refractedRays";
+import RotationalSpaceMod from "./components/rotationalSpaceMod";
 
 
 
@@ -22,7 +23,8 @@ const App = () => {
           {/* <Route path="/polygon" element={<Polygon />} />  */}
           {/* <Route path="/platonics" element={<Platonics />} />  */}
           {/* <Route path="/tester" element={<Tester />} />  */}
-          <Route path="/refractedrays" element={<RefractedRays />} /> 
+          {/* <Route path="/refractedrays" element={<RefractedRays />} />  */}
+          <Route path="/rotationalspacemod" element={<RotationalSpaceMod />} /> 
           <Route path="/" element={<Home />} /> 
           <Route path="/about" element={<About />} /> 
           <Route path="/work" element={<Work />} /> 

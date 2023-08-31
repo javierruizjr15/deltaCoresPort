@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 import '../index.css';
 
 /**
@@ -729,7 +729,7 @@ class WTCGL {
   WTCGL.TEXTYPE_UNSIGNED_BYTE = 1;
   WTCGL.TEXTYPE_HALF_FLOAT_OES = 2;
 
-/*Copyright (c) 2023 by Liam Egan (https://codepen.io/shubniggurath/pen/JzJdey)
+/*Copyright (c) 2023 by Liam Egan (https://codepen.io/shubniggurath/pen/GVQqjz)
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
@@ -739,9 +739,9 @@ const VERTEX_SHADER = `
     
     uniform mat4 u_modelViewMatrix;
     uniform mat4 u_projectionMatrix;
-
+    
     void main() {
-    gl_Position = a_position;
+        gl_Position = a_position;
     }
 `
 const FRAGMENT_SHADER = `
@@ -756,9 +756,9 @@ const FRAGMENT_SHADER = `
     // movement variables
     vec3 movement = vec3(.0);
     
-    const int maxIterations = 128;
-    const float stopThreshold = 0.01;
-    const float stepScale = .9;
+    const int maxIterations = 256;
+    const float stopThreshold = 0.001;
+    const float stepScale = .5;
     const float eps = 0.005;
     const vec3 clipColour = vec3(0.);
     const vec3 fogColour = vec3(0.);
@@ -776,45 +776,52 @@ const FRAGMENT_SHADER = `
     };
     
     vec3 path(float z) {
-        return vec3(sin(z*.2)*4.,0.,z*5.);
-        return vec3(0,0.,z*5.);
+        const float multiplier = 5.;
+        float t = z * multiplier;
+        return vec3(sin(t*.1),cos(t*.1),t);
+    }
+    // polynomial smooth min (k = 0.1);
+    float sminCubic( float a, float b, float k )
+    {
+        float h = max( k-abs(a-b), 0.0 )/k;
+        return min( a, b ) - h*h*h*k*(1.0/6.0);
     }
     
     // This function describes the world in distances from any given 3 dimensional point in space
-    float world(in vec3 position, inout int object_id, inout vec3 norm) {
-        // float z = position.z * .17;
-        // float c = cos(z);
-        // float s = sin(z);
-        // position.xy *= mat2(c, -s, s, c);
+    float world(in vec3 position, inout int object_id) {
         
-        vec3 pos = floor(position * .5);
-        object_id = int(floor(pos.x + pos.y + pos.z)*2.);
-        position = mod(position, 1.) - .5;
-        float world = length(position) - .3;
-        norm = normalize(position);
-        position.xy -= path(position.z+100.).xy;
-        return world;
+        // vec3 p = path(position.z);
+        float s = sin(position.z*.1);
+        float c = cos(position.z*.1);
+        mat2 rot = mat2(s, c, -c, s);
+        position.xy *= rot;
+        
+        // vec3 pos = floor((position + vec3(0,0,u_time*5.)) * .5 * length(position*.0005));
+        // vec3 pos = floor(mod(position, 2.) * vec3(1, 1, .5) * length(position*.0005));
+        // object_id = int(mod(floor(pos.x + pos.y + pos.z), 2.));
+        vec3 pos = mod(position * 2., 2.) - 1.;
+        object_id = int(mod(floor(pos.x * pos.y * pos.z), 2.));
+        
+        vec3 pillarpos = position;
+        pillarpos.x -= 1.;
+        pillarpos.xz = mod(pillarpos.xz, 3.) - 1.5;
+        // pillarpos.z = mod(pillarpos.x, 3.) - 1.5;
+        
+        // return length(pillarpos.xz) - .1;
+        
+        return sminCubic(min(position.y + .5, 2. - position.y), length(pillarpos.xz) - .3, .5);
     }
     float world(in vec3 position) {
         int dummy = 0;
-        vec3 norm = vec3(0.);
-        return world(position, dummy, norm);
+        return world(position, dummy);
     }
     
     vec3 getObjectColour(int object_id) {
         float modid = mod(float(object_id), 5.);
         if(modid == 0.) {
-        return vec3(.0, 0., 0.5);
-        } else if(modid == 1.) {
-        return vec3(.5, 0.1, 0.);
-        } else if(modid == 2.) {
-        return vec3(.5, 0.0, 0.5);
-        } else if(modid == 3.) {
-        return vec3(.0, 0.5, 0.5);
-        } else if(modid == 4.) {
-        return vec3(.4, 0.5, 0.);
+        return vec3(0.8);
         }
-        return vec3(.5, 0., 0.);
+        return vec3(0.2);
     }
     
     Surface getSurface(int object_id, float rayDepth, vec3 sp) {
@@ -825,6 +832,24 @@ const FRAGMENT_SHADER = `
         getObjectColour(object_id), 
         .5, 
         200.);
+    }
+    
+    // The raymarch loop
+    Surface rayMarch(vec3 ro, vec3 rd, float start, float end) {
+        float sceneDist = 1e4;
+        float rayDepth = start;
+        int object_id = 0;
+        for(int i = 0; i < maxIterations; i++) {
+        sceneDist = world(ro + rd * rayDepth, object_id);
+        
+        if(sceneDist < stopThreshold || rayDepth > end) {
+            break;
+        }
+        
+        rayDepth += sceneDist * stepScale;
+        }
+        
+        return getSurface(object_id, rayDepth, ro + rd * rayDepth);
     }
     
     // Calculated the normal of any given point in space. Intended to be cast from the point of a surface
@@ -838,41 +863,67 @@ const FRAGMENT_SHADER = `
         return normalize(grad);
     }
     
-    // The raymarch loop
-    Surface rayMarch(vec3 ro, vec3 rd, float start, float end, inout vec3 c) {
-        float sceneDist = 1e4;
-        float rayDepth = start;
-        int object_id = 0;
-        bool inside = false;
-        for(int i = 0; i < maxIterations; i++) {
-        vec3 norm = vec3(0);
-        sceneDist = world(ro + rd * rayDepth, object_id, norm);
-        
-        if(rayDepth > end || length(c) >= 3.) {
-            break;
+    float calcSoftshadow( in vec3 ro, in vec3 rd, in float mint, in float tmax ) {
+        float res = 1.0;
+        float t = mint;
+        float ph = 1e10; // big, such that y = 0 on the first iteration
+
+        for( int i=0; i<32; i++ ) {
+            float h = world( ro + rd*t );
+            float y = h*h/(2.0*ph);
+            float d = sqrt(h*h-y*y);
+            res = min( res, 10.0*d/max(0.0,t-y) );
+            ph = h;
+
+            t += h;
+
+            if( res<0.0001 || t>tmax ) break;
+
         }
+        return clamp( res, 0.0, 1.0 );
+    }
+    
+    vec3 lighting(Surface surface_object, vec3 cam) {
         
-        if(sceneDist < stopThreshold && sceneDist > 0.) {
-            // c += lighting(getSurface(object_id, rayDepth, ro + rd * rayDepth), ro);
-            Surface o = getSurface(object_id, rayDepth, ro + rd * rayDepth);
-            
-            float sceneLength = length(ro - o.position);
-            float sceneAttenuation = min( 1. / ( 0.15 * sceneLength ), 1. );
-            c += (o.colour*o.colour*(norm*.5+1.5))*.5*sceneAttenuation;
-            // rd += norm*.01;
-            rd = normalize(refract(rd, norm, 1.005 + u_mouse.y));
-            rayDepth += stopThreshold+.62;
-        } else if(sceneDist < 0.) {
-            c += .1;
-            rayDepth += .1;
-            // rayDepth += (1. / abs(sceneDist)) * .5;
-        } else {
-            rayDepth += sceneDist * stepScale;
-        }
+        // start with black
+        vec3 sceneColour = vec3(0);
         
-        }
+        // Surface normal
+        vec3 normal = calculate_normal(surface_object.position);
         
-        return getSurface(object_id, rayDepth, ro + rd * rayDepth);
+        // Light position
+        vec3 lp = cam+10.;    // Light direction
+        vec3 ld = lp - surface_object.position;
+        
+        // light attenuation
+        // For brightly lit scenes or global illumination (like sunlit), this can be limited to just normalizing the ld
+        float len = length( ld );
+        ld = normalize(ld);
+        float lightAtten = min( 1.0 / ( 0.15*len ), 1.0 );
+        // lightAtten = 1.;
+        
+        // Scene values, mainly for fog
+        float sceneLength = length(cam - surface_object.position);
+        float sceneAttenuation = min( 1. / ( 0.05 * sceneLength * sceneLength ), 1. );
+        
+        // The surface's light reflection normal
+        vec3 reflection_normal = reflect(-ld, normal);
+        
+        // Ambient Occlusion
+        float ao = 1.;
+        
+        // float shadows = calcSoftshadow( surface_object.position, ld, .00001, 1. );
+        
+        // Object surface properties
+        float diffuse = max(0., dot(normal, ld));
+        float specular = max(0., dot( reflection_normal, normalize(cam - surface_object.position) ));
+        
+        // Bringing all of the lighting components together
+        sceneColour += ( surface_object.colour * (diffuse + surface_object.ambient) + specular ) * light1_colour * lightAtten;
+        // adding fog
+        sceneColour = mix( sceneColour, fogColour, 1. - sceneAttenuation );
+        
+        return sceneColour;
     }
 
     void main() {
@@ -880,12 +931,12 @@ const FRAGMENT_SHADER = `
         
         // movement
         movement = path(u_time);
-    //   movement = vec3(0);
+        vec3 movement2 = path(u_time-2.);
         
         // Camera and look-at
-        vec3 cam = vec3(0,0,-1);
-        vec3 lookAt = vec3(sin(u_time)*.2+.2,cos(u_time)*.01-.4,0);
-        lookAt=vec3(0);
+        vec3 cam = vec3(0, 0, 0);
+        vec3 lookAt = vec3(-.1, 0, 1);
+        lookAt.xy += u_mouse * 3.;
         
         // add movement
         lookAt += movement;
@@ -896,133 +947,134 @@ const FRAGMENT_SHADER = `
         vec3 right = normalize(vec3(forward.z, 0., -forward.x));
         vec3 up = normalize(cross(forward, right));
         
-        // FOV
-        float FOV = .6;
+        // FOVs
+        float FOV = 1.1;
         
         // Ray origin and ray direction
         vec3 ro = cam;
         vec3 rd = normalize(forward + FOV * uv.x * right + FOV * uv.y * up);
-        
-        float t = movement.x * -.5;
-        float s = sin(t);
-        float c = cos(t);
-        rd.xy *= mat2(c, -s, s, c);
+        rd.xy *= mat2(movement2.y, movement2.x, -movement2.x, movement2.y);
         
         // Ray marching
         const float clipNear = 0.;
         const float clipFar = 32.;
-        vec3 sceneColour = vec3(0.);
-        rayMarch(ro, rd, clipNear, clipFar, sceneColour);
-    //     if(objectSurface.distance > clipFar) {
-    //       gl_FragColor = vec4(clipColour, 1.);
-    //       return;
-    //     }
+        Surface objectSurface = rayMarch(ro, rd, clipNear, clipFar);
+        if(objectSurface.distance > clipFar) {
+        gl_FragColor = vec4(clipColour, 1.);
+        return;
+        }
         
-    //     vec3 sceneColour = lighting(objectSurface, cam);
+        vec3 sceneColour = lighting(objectSurface, cam);
         // vec3 sceneColour = vec3(dist*.1);
         
         gl_FragColor = vec4(sceneColour, 1.);
     }
 `
 
-const RefractedRays = () => {
+const RotationalSpaceMod = () => {
+
     const canvasRef = useRef(null);
 
     useEffect(() => {
-    if (!canvasRef.current) return;
-
-    const twodWebGL = new WTCGL(
+      if (!canvasRef.current) return;
+  
+      const twodWebGL = new WTCGL(
         canvasRef.current,
         VERTEX_SHADER,
         FRAGMENT_SHADER,
         window.innerWidth,
         window.innerHeight,
-        2
-    );
-    twodWebGL.startTime = -100 + Math.random();
-
-    const handleResize = () => {
-        twodWebGL.resize(window.innerWidth, window.innerHeight);
-    };
-
-    const handleMouseMove = (e) => {
-        const mousepos = [0, 0];
+        1,
+        false
+      );
+      twodWebGL.startTime = -100;
+  
+      let debounce;
+      const handleResize = () => {
+        clearInterval(debounce);
+        debounce = setInterval(() => {
+          twodWebGL.resize(window.innerWidth, window.innerHeight);
+        }, 100);
+      };
+  
+      const mousepos = [0, 0];
+      twodWebGL.addUniform('mouse', WTCGL.TYPE_V2, mousepos);
+  
+      const handleMouseMove = e => {
         let ratio = window.innerHeight / window.innerWidth;
-
-        if (window.innerHeight > window.innerWidth) {
-        mousepos[0] = (e.pageX - window.innerWidth / 2) / window.innerWidth;
-        mousepos[1] = (e.pageY - window.innerHeight / 2) / window.innerHeight * -1 * ratio;
+        if (ratio > 1) {
+          mousepos[0] = (e.pageX - window.innerWidth / 2) / window.innerWidth;
+          mousepos[1] = (e.pageY - window.innerHeight / 2) / window.innerHeight * -1 * ratio;
         } else {
-        mousepos[0] = (e.pageX - window.innerWidth / 2) / window.innerWidth / ratio;
-        mousepos[1] = (e.pageY - window.innerHeight / 2) / window.innerHeight * -1;
+          mousepos[0] = (e.pageX - window.innerWidth / 2) / window.innerWidth / ratio;
+          mousepos[1] = (e.pageY - window.innerHeight / 2) / window.innerHeight * -1;
         }
-
         twodWebGL.addUniform('mouse', WTCGL.TYPE_V2, mousepos);
-    };
-
-    const loadImage = (imageObject) => {
+      };
+  
+      const loadImage = imageObject => {
         return new Promise((resolve, reject) => {
-        let img = new Image();
-        img.crossOrigin = "anonymous";
-
-        img.onload = () => {
+          let img = new Image();
+          img.crossOrigin = "anonymous";
+  
+          img.onload = () => {
             imageObject.img = img;
             resolve(imageObject);
-        };
-
-        img.onerror = reject;
-        img.src = imageObject.url;
+          };
+  
+          img.onerror = reject;
+          img.src = imageObject.url;
         });
-    };
-
-    const loadTextures = (textures) => {
+      };
+  
+      const loadTextures = textures => {
         return new Promise((resolve) => {
-        const loadTexture = (pointer) => {
+          const loadTexture = pointer => {
             if (pointer >= textures.length || pointer > 10) {
-            resolve(textures);
-            return;
+              resolve(textures);
+              return;
             };
-
             const imageObject = textures[pointer];
-
+  
             loadImage(imageObject).then(
-            (result) => {
+              result => {
                 twodWebGL.addTexture(result.name, result.type, result.img);
                 loadTexture(pointer + 1);
-            },
-            console.error
+              },
+              console.error
             );
-        };
-        loadTexture(0);
+          };
+          loadTexture(0);
         });
-    };
-
-    const textures = [
+      };
+  
+      const textures = [
         {
-        name: 'noise',
-        url: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/noise.png',
-        type: WTCGL.IMAGETYPE_TILE,
-        img: null
+          name: 'noise',
+          url: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/noise.png',
+          type: WTCGL.IMAGETYPE_TILE,
+          img: null
         }
-    ];
-
-    loadTextures(textures).then(() => {
+      ];
+  
+      loadTextures(textures).then(() => {
         twodWebGL.initTextures();
         twodWebGL.running = true;
-    }, console.error);
-
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('pointermove', handleMouseMove);
-
-    return () => {
+      }, console.error);
+  
+      window.addEventListener('resize', handleResize);
+      window.addEventListener('pointermove', handleMouseMove);
+  
+      return () => {
         window.removeEventListener('resize', handleResize);
         window.removeEventListener('pointermove', handleMouseMove);
-    };
-
+        clearInterval(debounce);
+      };
+  
     }, []);
-
+  
     return <canvas id="webgl" ref={canvasRef}></canvas>;
+  
 }
-    
 
-export default RefractedRays;
+export default RotationalSpaceMod;
