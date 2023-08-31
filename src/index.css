@@ -31,7 +31,7 @@ code {
 .column {
   flex: 1;
   padding: 16px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +49,22 @@ code {
     -webkit-user-select: none;  /* For Safari and Chrome */
     -moz-user-select: none;     /* For Firefox */
     -ms-user-select: none;
+    /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  margin: auto;
+  /* font-size: 5vmin; */
+  font-weight: 100;
+  transition: font-weight 250ms ease-in-out;
+  text-decoration: none;
 }
+
+/* dont need this */
+/* .menu-item:hover {
+  font-weight: 900;
+  color: whitesmoke;
+  text-decoration: none;
+} */ 
 
 .nav-item {
   color:whitesmoke; 
@@ -59,9 +74,20 @@ code {
   justify-content: space-between;
   align-items: flex-end;
   user-select: none;
-    -webkit-user-select: none;  /* For Safari and Chrome */
-    -moz-user-select: none;     /* For Firefox */
-    -ms-user-select: none;
+  -webkit-user-select: none;  /* For Safari and Chrome */
+  -moz-user-select: none;     /* For Firefox */
+  -ms-user-select: none;
+}
+
+.white-link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.white-link:hover {
+  font-weight: 900;
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 .flex-top-left {
@@ -88,9 +114,6 @@ code {
   margin-right: 15px;
 }
 
-.white-link {
-  color: whitesmoke;
-}
 
 .text-effect-canvas {
   position: absolute;
