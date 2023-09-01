@@ -1,30 +1,40 @@
 import HappyFreya from '../images/freyaFalls/FreyaH1k.png';
 import Bones from '../images/freyaFalls/boneemoji300.png';
-import DCLogo from '../images/DCOGB75.png';
+import DCLogo from '../images//freyaFalls/DCOGW75.png';
+import Moon from '../images/freyaFalls/moon100.png';
 
 let assets = {
     nauseated:  HappyFreya,
+    // dragon:  HappyFreya,
     // green:      Bones,
     leafy:      Bones,
     trex:       DCLogo,
+    snake:      Moon,
     // herb:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/herb_1f33f.png",
     // white:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/white-heavy-check-mark_2705.png",
     // microbe:    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/microbe_1f9a0.png",
     // turtle:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/turtle_1f422.png",
     // lizard:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/lizard_1f98e.png",
-    // snake:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/snake_1f40d.png",
     // evergreen:  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/evergreen-tree_1f332.png",
     // dragon:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/dragon-face_1f432.png",
-    // cactus:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/cactus_1f335.png",
-    // gloves:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/gloves_1f9e4.png",
-    // green:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/green-heart_1f49a.png",
+    // // cactus:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/cactus_1f335.png",
+    // // gloves:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/gloves_1f9e4.png",
+    // // green:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/green-heart_1f49a.png",
     // frog:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/frog-face_1f438.png",
     // crocodile:  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/crocodile_1f40a.png",
-    // flag:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/flag-for-cocos-islands_1f1e8-1f1e8.png",
-    // four:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/four-leaf-clover_1f340.png",
-    // broccoli:   "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/broccoli_1f966.png",
-    // black:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/black-universal-recycling-symbol_267b.png"
+  //   flag:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/flag-for-cocos-islands_1f1e8-1f1e8.png",
+  //   four:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/four-leaf-clover_1f340.png",
+  //   broccoli:   "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/broccoli_1f966.png",
+  //   black:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/black-universal-recycling-symbol_267b.png"
   }
+
+
+/*Copyright (c) 2023 by Liam Egan (https://codepen.io/shubniggurath/pen/zMBwbX)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
+
+
   
   const preload = PIXI.loader;
   const rate = 0.0001; // Particles per pixel per second
@@ -103,10 +113,10 @@ let assets = {
     preload.add(name, assets[name]);
   }
   preload.load((loader, resources) => {
-    app = new PIXI.Application(window.innerWidth, window.innerHeight, {backgroundColor : 0x1099bb});
+    app = new PIXI.Application(window.innerWidth, window.innerHeight, {backgroundColor : 0x000000});
     
     stageBG.clear();
-    stageBG.beginFill(0x1099bb);
+    stageBG.beginFill(0x000000);
     stageBG.drawRect(0, 0, dimensions.x, dimensions.y);
     
     app.stage.addChild(stageBG);
