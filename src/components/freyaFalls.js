@@ -1,5 +1,5 @@
 import HappyFreya from '../images/freyaFalls/FreyaH1k.png';
-import Bones from '../images/freyaFalls/boneemoji300.png';
+import Bones from '../images/freyaFalls/boneemoji200.png';
 import DCLogo from '../images//freyaFalls/DCOGW75.png';
 import Moon from '../images/freyaFalls/moon100.png';
 
