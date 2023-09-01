@@ -11,8 +11,7 @@ import Contact from "./pages/contact";
 // import Carousel from "./components/carousel";
 import RefractedRays from "./components/refractedRays";
 import RotationalSpaceMod from "./components/rotationalSpaceMod";
-
-
+import FreyaFalls from './components/freyaFalls'
 
 const App = () => {
   return (
@@ -23,6 +22,7 @@ const App = () => {
           {/* <Route path="/polygon" element={<Polygon />} />  */}
           {/* <Route path="/platonics" element={<Platonics />} />  */}
           {/* <Route path="/tester" element={<Tester />} />  */}
+          <Route path="/freyafalls" element={<FreyaFalls />} /> 
           <Route path="/refractedrays" element={<RefractedRays />} /> 
           <Route path="/rotationalspacemod" element={<RotationalSpaceMod />} /> 
           <Route path="/" element={<Home />} /> 
