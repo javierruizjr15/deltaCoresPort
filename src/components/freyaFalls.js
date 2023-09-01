@@ -1,25 +1,29 @@
+import HappyFreya from '../images/freyaFalls/FreyaH1k.png';
+import Bones from '../images/freyaFalls/boneemoji300.png';
+import DCLogo from '../images/DCOGB75.png';
+
 let assets = {
-    nauseated:  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/nauseated-face_1f922%20(1).png",
-    green:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/green-salad_1f957.png",
-    leafy:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/leafy-green_1f96c.png",
-    trex:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/trex_1f996.png",
-    herb:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/herb_1f33f.png",
-    white:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/white-heavy-check-mark_2705.png",
-    microbe:    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/microbe_1f9a0.png",
-    turtle:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/turtle_1f422.png",
-    lizard:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/lizard_1f98e.png",
-    snake:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/snake_1f40d.png",
-    evergreen:  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/evergreen-tree_1f332.png",
-    dragon:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/dragon-face_1f432.png",
-    cactus:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/cactus_1f335.png",
-    gloves:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/gloves_1f9e4.png",
-    green:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/green-heart_1f49a.png",
-    frog:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/frog-face_1f438.png",
-    crocodile:  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/crocodile_1f40a.png",
-    flag:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/flag-for-cocos-islands_1f1e8-1f1e8.png",
-    four:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/four-leaf-clover_1f340.png",
-    broccoli:   "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/broccoli_1f966.png",
-    black:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/black-universal-recycling-symbol_267b.png"
+    nauseated:  HappyFreya,
+    // green:      Bones,
+    leafy:      Bones,
+    trex:       DCLogo,
+    // herb:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/herb_1f33f.png",
+    // white:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/white-heavy-check-mark_2705.png",
+    // microbe:    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/microbe_1f9a0.png",
+    // turtle:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/turtle_1f422.png",
+    // lizard:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/lizard_1f98e.png",
+    // snake:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/snake_1f40d.png",
+    // evergreen:  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/evergreen-tree_1f332.png",
+    // dragon:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/dragon-face_1f432.png",
+    // cactus:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/cactus_1f335.png",
+    // gloves:     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/gloves_1f9e4.png",
+    // green:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/green-heart_1f49a.png",
+    // frog:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/frog-face_1f438.png",
+    // crocodile:  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/crocodile_1f40a.png",
+    // flag:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/flag-for-cocos-islands_1f1e8-1f1e8.png",
+    // four:       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/four-leaf-clover_1f340.png",
+    // broccoli:   "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/broccoli_1f966.png",
+    // black:      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/black-universal-recycling-symbol_267b.png"
   }
   
   const preload = PIXI.loader;
