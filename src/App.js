@@ -11,7 +11,7 @@ import Contact from "./pages/contact";
 // import Carousel from "./components/carousel";
 import RefractedRays from "./components/refractedRays";
 import RotationalSpaceMod from "./components/rotationalSpaceMod";
-import FreyaFalls from './components/freyaFalls'
+import FreyaFalls from './components/freyaFalls.js';
 
 const App = () => {
   return (
