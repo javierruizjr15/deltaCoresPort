@@ -1,5 +1,10 @@
 import { Renderer, Drawable, Texture, Program, Plane, Geometry, GeometryAttribute, Mesh, Uniform } from "https://cdn.skypack.dev/wtc-gl@1.0.0-beta.49";
 import { Vec2 } from "https://cdn.skypack.dev/wtc-math@1.0.17";
+import FreyaHOG from '../images/FreyaHOG2.png';
+import Bone from '../images/freyaFalls/boneemoji200.png';
+import DCLogo from '../images//freyaFalls/DCOGW75.png';
+import Moon from '../images/freyaFalls/moon100.png';
+
 
 export const Freymoji = () => {
 
@@ -250,15 +255,31 @@ export const Freymoji = () => {
         trimWidth = bound.right - bound.left,
         trimmed = ctx.getImageData(bound.left, bound.top, trimWidth, trimHeight);
     
+        // copy.canvas.width = trimWidth;
+        // copy.canvas.height = trimHeight;
+        // copy.putImageData(trimmed, 0, 0);
     copy.canvas.width = Math.max(trimWidth, trimHeight);
     copy.canvas.height = Math.max(trimWidth, trimHeight);
     copy.putImageData(trimmed, (Math.max(trimWidth, trimHeight)-trimWidth)/2, (Math.max(trimWidth, trimHeight)-trimHeight)/2);
+    
     
     // open new window with trimmed image:
     return copy.canvas;
     }
 
-    let emoji = searchParams.get('emojis')?.split(',') || ['😀','🤣','🤨','🥸','🥳','🥶','🤔','😡','🤡','💩'];
+    let emoji = searchParams.get('emojis')?.split(',') || [ FreyaHOG, '😀' ];
+    // let emoji = searchParams.get('emojis')?.split(',') || [ FreyaHOG,'🤣','🤨','🥸','🥳','🥶','🤔','😡','🤡','💩'];
+
+    //function to load images to array
+    function loadImage(src) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = src;
+        });
+    }
+    
 
     if(emoji.length < 10) {
     while(emoji.length < 10) {
@@ -267,17 +288,42 @@ export const Freymoji = () => {
     }
     emoji.length=10;
 
-    for(let i = 0; i < emoji.length; i++) {
-    const tex = createEmojiTexture(emoji[i]);
-    
-    const texture = new Texture(gl, {image:tex});
-    uniforms[`s_ball${i+1}`] = new Uniform({
-        name: `ball${i+1}`,
-        value: texture,
-        kind: "texture"
-    });
+    for (let i = 0; i < emoji.length; i++) {
+        // Check if it's an emoji or an image based on file extensions
+        const isImage = /\.jpg|\.jpeg|\.png|\.gif|\.bmp$/i.test(emoji[i]);
+        
+        if (isImage) {
+            loadImage(emoji[i]).then(image => {
+                const texture = new Texture(gl, {image});
+                uniforms[`s_ball${i+1}`] = new Uniform({
+                    name: `ball${i+1}`,
+                    value: texture,
+                    kind: "texture"
+                });
+            }).catch(error => {
+                console.error('Error loading image:', error);
+            });
+        } else {
+            const tex = createEmojiTexture(emoji[i]);
+            const texture = new Texture(gl, {image: tex});
+            uniforms[`s_ball${i+1}`] = new Uniform({
+                name: `ball${i+1}`,
+                value: texture,
+                kind: "texture"
+            });
+        }
     }
 
+    // for(let i = 0; i < emoji.length; i++) {
+    //     const tex = createEmojiTexture(emoji[i]);
+        
+    //     const texture = new Texture(gl, {image:tex});
+    //     uniforms[`s_ball${i+1}`] = new Uniform({
+    //       name: `ball${i+1}`,
+    //       value: texture,
+    //       kind: "texture"
+    //     });
+    
     requestAnimationFrame(run);
 
 }
