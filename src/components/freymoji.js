@@ -267,7 +267,7 @@ export const Freymoji = () => {
     return copy.canvas;
     }
 
-    let emoji = searchParams.get('emojis')?.split(',') || [ FreyaHOG, '😀' ];
+    let emoji = searchParams.get('emojis')?.split(',') || [ FreyaHOG ];
     // let emoji = searchParams.get('emojis')?.split(',') || [ FreyaHOG,'🤣','🤨','🥸','🥳','🥶','🤔','😡','🤡','💩'];
 
     //function to load images to array
