@@ -14,6 +14,7 @@ import RotationalSpaceMod from "./components/rotationalSpaceMod";
 import FreyaFalls from "./components/freyaFalls.js";
 import ReactionWaves from "./components/reactionWaves";
 import Pokeballs from "./components/infinitePokeballs";
+import Freymoji from "./components/freymoji";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           {/* <Route path="/polygon" element={<Polygon />} />  */}
           {/* <Route path="/platonics" element={<Platonics />} />  */}
           {/* <Route path="/tester" element={<Tester />} />  */}
+          <Route path="/freymoji" element={<Freymoji />} /> 
           <Route path="/pokeballs" element={<Pokeballs />} /> 
           <Route path="/reactionwaves" element={<ReactionWaves />} /> 
           <Route path="/freyafalls" element={<FreyaFalls />} /> 
