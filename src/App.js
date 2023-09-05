@@ -12,6 +12,7 @@ import Contact from "./pages/contact";
 import RefractedRays from "./components/refractedRays";
 import RotationalSpaceMod from "./components/rotationalSpaceMod";
 import FreyaFalls from './components/freyaFalls.js';
+import ReactionWaves from "./components/reactionWaves";
 
 const App = () => {
   return (
@@ -22,11 +23,12 @@ const App = () => {
           {/* <Route path="/polygon" element={<Polygon />} />  */}
           {/* <Route path="/platonics" element={<Platonics />} />  */}
           {/* <Route path="/tester" element={<Tester />} />  */}
+          <Route path="/reactionwaves" element={<ReactionWaves />} /> 
           <Route path="/freyafalls" element={<FreyaFalls />} /> 
           <Route path="/refractedrays" element={<RefractedRays />} /> 
           <Route path="/rotationalspacemod" element={<RotationalSpaceMod />} /> 
           <Route path="/" element={<Home />} /> 
-          <Route path="/about" element={<About />} /> 
+          <Route path="/about" element={<About />} /> ß
           <Route path="/work" element={<Work />} /> 
           <Route path="/contact" element={<Contact />} /> 
         </Routes>

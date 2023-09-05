@@ -3,6 +3,8 @@ import Bones from '../images/freyaFalls/boneemoji200.png';
 import DCLogo from '../images//freyaFalls/DCOGW75.png';
 import Moon from '../images/freyaFalls/moon100.png';
 
+export const FreyaFalls = () =>{
+
 let assets = {
     nauseated:  HappyFreya,
     // dragon:  HappyFreya,
@@ -258,3 +260,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     pointer.y = e.clientY;
     e.preventDefault();
   });
+
+};
+
+export default FreyaFalls;
