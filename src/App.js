@@ -11,8 +11,9 @@ import Contact from "./pages/contact";
 // import Carousel from "./components/carousel";
 import RefractedRays from "./components/refractedRays";
 import RotationalSpaceMod from "./components/rotationalSpaceMod";
-import FreyaFalls from './components/freyaFalls.js';
+import FreyaFalls from "./components/freyaFalls.js";
 import ReactionWaves from "./components/reactionWaves";
+import Pokeballs from "./components/infinitePokeballs";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           {/* <Route path="/polygon" element={<Polygon />} />  */}
           {/* <Route path="/platonics" element={<Platonics />} />  */}
           {/* <Route path="/tester" element={<Tester />} />  */}
+          <Route path="/pokeballs" element={<Pokeballs />} /> 
           <Route path="/reactionwaves" element={<ReactionWaves />} /> 
           <Route path="/freyafalls" element={<FreyaFalls />} /> 
           <Route path="/refractedrays" element={<RefractedRays />} /> 
