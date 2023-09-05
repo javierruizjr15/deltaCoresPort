@@ -12,7 +12,7 @@ const Contact = () => {
                 <div className="home-page">
                     <LogoLeft />
                     <div className="column menu-item contact-column contact-text">
-                        <h1>Please Contact me for software engineering services</h1>
+                        <h1>Please contact me for software engineering services</h1>
                         <p>
                          Email: javierruizjr15@gmail.com
                         </p>
