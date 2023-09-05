@@ -231,3 +231,18 @@ canvas {
 .carousel-control-next {
   right: -25%; /* Adjust this value as per your design needs */
 }
+
+.about-text, .contact-text {
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+    padding: 15px; /* Add some padding for better design */
+    color: whitesmoke; 
+}
+
+.bar {
+  width: 100px; /* Initial width */
+  height: 10px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  transition: width 0.3s ease-out;
+}
+
