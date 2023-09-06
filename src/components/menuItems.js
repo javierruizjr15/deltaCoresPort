@@ -1,6 +1,7 @@
 import React from "react";
 import '../index.css'; 
 import { Link } from "react-router-dom";
+import ExLine from "./exLine";
 
 const MenuItems = () => {
 
@@ -15,6 +16,7 @@ const MenuItems = () => {
                 <p>
                     <Link to="/work" className="white-link">Work</Link>
                 </p>
+                <ExLine />
             </div>
             <div className="column menu-item">
                 <p>
