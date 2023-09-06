@@ -250,11 +250,6 @@ export const Freymoji = () => {
         }
         }
     }
-
-       // Add double-click event listener to navigate to /home page
-       document.addEventListener('dblclick', function() {
-        window.location.href = '/'; // Navigate to the / page
-    });
         
     var trimHeight = bound.bottom - bound.top,
         trimWidth = bound.right - bound.left,
@@ -318,6 +313,11 @@ export const Freymoji = () => {
             });
         }
     }
+
+          // Add double-click event listener to navigate to /home page
+          document.addEventListener('dblclick', function() {
+            window.location.href = '/'; // Navigate to the / page
+        });
 
     // for(let i = 0; i < emoji.length; i++) {
     //     const tex = createEmojiTexture(emoji[i]);
