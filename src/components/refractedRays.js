@@ -1011,6 +1011,11 @@ const RefractedRays = () => {
         twodWebGL.running = true;
     }, console.error);
 
+   // Add double-click event listener to navigate to /home page
+   document.addEventListener('dblclick', function() {
+    window.location.href = '/'; // Navigate to the / page
+});
+
     window.addEventListener('resize', handleResize);
     window.addEventListener('pointermove', handleMouseMove);
 

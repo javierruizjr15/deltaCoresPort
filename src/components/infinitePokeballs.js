@@ -464,6 +464,11 @@ export const Pokeballs = () => {
     onWindowResize();
     window.addEventListener( 'resize', onWindowResize, false );
 
+    // Add double-click event listener to navigate to /home page
+    document.addEventListener('dblclick', function() {
+        window.location.href = '/'; // Navigate to the / page
+    });
+
     document.addEventListener('pointermove', (e)=> {
         let ratio = window.innerHeight / window.innerWidth;
         uniforms.u_mouse.value.x = (e.pageX - window.innerWidth / 2) / window.innerWidth / ratio;

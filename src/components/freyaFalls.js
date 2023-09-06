@@ -240,7 +240,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
   }
   
-  
+     // Add double-click event listener to navigate to /home page
+     document.addEventListener('dblclick', function() {
+      window.location.href = '/'; // Navigate to the / page
+  });
   
   window.addEventListener('resize', (e)=> {
     dimensions = new Vector(window.innerWidth, window.innerHeight);
