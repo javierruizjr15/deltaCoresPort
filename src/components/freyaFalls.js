@@ -3,7 +3,7 @@ import Bones from '../images/freyaFalls/boneemoji200.png';
 import DCLogo from '../images//freyaFalls/DCOGW75.png';
 import Moon from '../images/freyaFalls/moon100.png';
 
-export const FreyaFalls = () =>{
+export const FreyaFalls = () => {
 
 let assets = {
     nauseated:  HappyFreya,
