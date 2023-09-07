@@ -1,3 +1,4 @@
+// *********Random Route to Component Page
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 
@@ -74,7 +75,8 @@ export default ExLine;
 
 
 
-// ****more render componet to overlay screen
+
+// *****render random component to overlay screen
 // import React, { useState, useRef } from 'react';
 // import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
@@ -88,7 +90,6 @@ export default ExLine;
 // const components = [ RotationalSpaceMod, ReactionWaves, RefractedRays, FreyaFalls, Freymoji, Pokeballs ];
 
 
-// *****render random component to overlay screen
 // const ExLine = () => {
 //     const [width, setWidth] = useState(0);
 //     const [showLine, setShowLine] = useState(false);
