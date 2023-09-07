@@ -225,11 +225,11 @@ canvas {
 }
 
 .carousel-control-prev {
-  left: -25%; /* Adjust this value as per your design needs */
+  left: -15%; /* Adjust this value as per your design needs */
 }
 
 .carousel-control-next {
-  right: -25%; /* Adjust this value as per your design needs */
+  right: -15%; /* Adjust this value as per your design needs */
 }
 
 .about-text, .contact-text {
