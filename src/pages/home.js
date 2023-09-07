@@ -4,19 +4,21 @@ import LogoLeft from "../components/logoleft";
 import MenuItems from "../components/menuItems";
 import NavRight from "../components/navRight";
 import Platonics from "../components/platonics";
+import Platonics2 from "../components/platonics2";
+import Polygon from "../components/polygon";
 
 const Home = () => {
     
         
     return (
         <>
-            <Platonics>
+            <Polygon>
                 <div className="home-page">
                     <LogoLeft />
                     <MenuItems />
                     <NavRight />
                 </div>
-            </Platonics>
+            </Polygon>
         </>
 
     );
