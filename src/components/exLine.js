@@ -14,7 +14,7 @@ const ExLine = () => {
     const routes = [
         "/freymoji",
         "/pokeballs",
-        "/reactionwaves",
+        // "/reactionwaves",
         "/freyafalls",
         "/refractedrays",
         "/rotationalspacemod"
