@@ -1,5 +1,5 @@
-import { Renderer, Drawable, Texture, Program, Plane, Geometry, GeometryAttribute, Mesh, Uniform } from "https://cdn.skypack.dev/wtc-gl@1.0.0-beta.49";
-import { Vec2 } from "https://cdn.skypack.dev/wtc-math@1.0.17";
+import { Renderer, Drawable, Texture, Program, Plane, Geometry, GeometryAttribute, Mesh, Uniform } from "wtc-gl";
+import { Vec2 } from "wtc-math";
 import FreyaHOG from '../images/FreyaHOG2.png';
 import Bone from '../images/freyaFalls/boneemoji200.png';
 import DCLogo from '../images//freyaFalls/DCOGW75.png';
