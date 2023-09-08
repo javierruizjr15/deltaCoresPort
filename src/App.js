@@ -12,7 +12,7 @@ import Contact from "./pages/contact";
 import RefractedRays from "./components/refractedRays";
 import RotationalSpaceMod from "./components/rotationalSpaceMod";
 import FreyaFalls from "./components/freyaFalls.js";
-import ReactionWaves from "./components/reactionWaves";
+// import ReactionWaves from "./components/reactionWaves";
 import Pokeballs from "./components/infinitePokeballs";
 import Freymoji from "./components/freymoji";
 import ExLine from "./components/exLine";
@@ -29,7 +29,7 @@ const App = () => {
           <Route path="/exline" element={<ExLine />} /> 
           <Route path="/freymoji" element={<Freymoji />} /> 
           <Route path="/pokeballs" element={<Pokeballs />} /> 
-          <Route path="/reactionwaves" element={<ReactionWaves />} /> 
+          {/* <Route path="/reactionwaves" element={<ReactionWaves />} />  */}
           <Route path="/freyafalls" element={<FreyaFalls />} /> 
           <Route path="/refractedrays" element={<RefractedRays />} /> 
           <Route path="/rotationalspacemod" element={<RotationalSpaceMod />} /> 
