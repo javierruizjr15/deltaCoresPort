@@ -11,7 +11,7 @@ const LogoLeft = () => {
                         <img 
                         src={deltacoreslogo} 
                         alt="delta cores logo" 
-                        style={{width: "80px", height: "120px" }} 
+                        style={{width: "70px", height: "100px" }} 
                         /> 
                     </div>
                 </div>

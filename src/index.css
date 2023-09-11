@@ -279,9 +279,13 @@ canvas {
 
 .button-bottom-center {
   position: fixed;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%); /* Centers the button horizontally */
   z-index: 100; /* Ensures it's on top */
+}
+
+.link-spacing {
+  margin: 0 25px; /* Add left and right margin of 15px */
 }

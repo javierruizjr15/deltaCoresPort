@@ -9,19 +9,9 @@ const MenuItems = () => {
         <>
             <div className="menu-items-container"> 
                 <div className="menu-item">
-                    <div>
-                        <Link to="/about" className="white-link">About</Link>
-                    </div>
-                {/* </div> */}
-                {/* <div className="menu-item2"> */}
-                    <div>
-                        <Link to="/work" className="white-link">Work</Link>
-                    </div>
-                {/* </div> */}
-                {/* <div className="menu-item2"> */}
-                    <div>
-                        <Link to="/contact" className="white-link">Contact</Link> 
-                    </div>
+                    <Link to="/about" className="white-link link-spacing">About</Link>
+                    <Link to="/work" className="white-link link-spacing">Work</Link>
+                    <Link to="/contact" className="white-link link-spacing">Contact</Link>
                 </div>
             </div>
             <div className="button-bottom-center">
