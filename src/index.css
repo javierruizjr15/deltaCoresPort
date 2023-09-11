@@ -99,8 +99,8 @@ code {
 
 .flex-top-left {
   align-self: flex-start;
-  margin-top: 15px;
-  margin-left: 15px;
+  /* margin-top: 15px;
+  margin-left: 15px; */
 }
 
 .flex-bottom-right, .flex-top-right {
@@ -111,7 +111,7 @@ code {
 
 .flex-top-right {
   align-self: flex-start;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   margin-right: 15px;
 }
 
@@ -257,6 +257,8 @@ canvas {
   display: flex; /* items side-by-side by default */
   justify-content: center; /* spaces them out evenly */
   align-items: center;
+  width: 60%; /* this is the key change to make it 3/5ths of the screen width */
+  margin: 0 auto; /* this will center it horizontally */
 }
 
 /* Media Query for mobile view (typically devices with width less than 768px) */
