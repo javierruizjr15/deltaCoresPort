@@ -11,7 +11,7 @@ const About = () => {
             <Polygon>
                 <div className="home-page">
                     <LogoLeft />
-                    <div className="column menu-item about-column about-text">
+                    <div className="about-column about-text">
                             <h1>I'm Javier, CEO of Delta Cores Engineering</h1>
                             <p>I am a software engineer with over 3 years of programming experience. 
                                 I have experience building, testing, and deploying web applications with React library in a MERN stack. 
