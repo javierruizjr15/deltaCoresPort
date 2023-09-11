@@ -121,6 +121,12 @@ code {
   margin-right: 15px;
 }
 
+.audio-icon {
+  position: fixed;  /* Fix the position */
+  right: 15px;      /* 15px from the right */
+  bottom: 15px;     /* 15px from the bottom */
+}
+
 
 .text-effect-canvas {
   position: absolute;
