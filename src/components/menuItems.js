@@ -7,6 +7,7 @@ const MenuItems = () => {
 
     return (
         <>
+        <div className="menu-items-container"> 
             <div className="column menu-item">
                 <p>
                     <Link to="/about" className="white-link">About</Link>
@@ -23,6 +24,7 @@ const MenuItems = () => {
                     <Link to="/contact" className="white-link">Contact</Link> 
                 </p>
             </div>
+        </div>
         </>
     )
 }

@@ -246,3 +246,26 @@ canvas {
   transition: width 0.3s ease-out;
 }
 
+.menu-items-container {
+  display: flex; /* items side-by-side by default */
+  justify-content: center; /* spaces them out evenly */
+  align-items: center;
+}
+
+/* Media Query for mobile view (typically devices with width less than 768px) */
+@media (max-width: 768px) {
+  .menu-items-container {
+    flex-direction: column; /* stacks items vertically */
+    align-items: center; /* centers them horizontally */
+  }
+
+  .column.menu-item {
+    flex: 1;
+    padding: 2px;  /* Reduced the padding to bring items closer together */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+

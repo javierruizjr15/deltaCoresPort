@@ -51,10 +51,14 @@ const ExLine = () => {
     }
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <button className="btn btn-dark" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
-                Click and Hold
-            </button>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+        >
+            {/* onMouseDown={handleMouseDown} 
+            onMouseUp={handleMouseUp} 
+            onMouseLeave={handleMouseUp} */}
+                <button className="btn btn-dark" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+                    Click and Hold
+                </button> 
             {showLine && (
                 <div 
                     style={{
