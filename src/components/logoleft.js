@@ -8,7 +8,7 @@ const LogoLeft = () => {
         <>
                 <div className="column">
                     <div className="flex-top-left"> 
-                        <div>
+                        <div className="logo-icon">
                             <img 
                             src={deltacoreslogo} 
                             alt="delta cores logo" 
