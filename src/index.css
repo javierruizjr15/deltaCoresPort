@@ -324,7 +324,7 @@ canvas {
   }
 
   .contact-column {
-    flex: 3;
+    flex: none;
   }
 }
 
