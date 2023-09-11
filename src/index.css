@@ -180,7 +180,7 @@ code {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100; 
-  font-size: 36px;
+  font-size: 24px;
   justify-content: center;
   align-items: center;
 }
@@ -343,6 +343,10 @@ canvas {
   .contact-column {
     /* flex: none; */
     font-size: 16px;   /* Adjust the font-size if needed for mobile */
+  }
+  .about-column {
+    /* flex: none; */
+    font-size: 14px;   /* Adjust the font-size if needed for mobile */
   }
 }
 
