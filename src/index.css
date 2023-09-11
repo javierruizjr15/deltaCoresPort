@@ -111,7 +111,7 @@ code {
 
 .flex-top-right {
   align-self: flex-start;
-  /* margin-top: 15px; */
+  margin-top: 15px;
   margin-right: 15px;
 }
 
@@ -127,6 +127,11 @@ code {
   bottom: 15px;     /* 15px from the bottom */
 }
 
+.home-icon {
+  position: fixed;  /* Fix the position */
+  right: 15px;      /* 15px from the right */
+  top: 15px;     /* 15px from the bottom */
+}
 
 .text-effect-canvas {
   position: absolute;
@@ -285,6 +290,11 @@ canvas {
     font-size: 14px;   /* Adjust the font-size if needed for mobile */
     right: 5px;       /* Adjust the right position if needed for mobile */
     bottom: 5px;      /* Adjust the bottom position if needed for mobile */
+  }
+  .home-icon {
+    font-size: 14px;   /* Adjust the font-size if needed for mobile */
+    right: 5px;       /* Adjust the right position if needed for mobile */
+    top: 5px;      /* Adjust the bottom position if needed for mobile */
   }
 }
 

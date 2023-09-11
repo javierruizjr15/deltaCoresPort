@@ -8,7 +8,7 @@ const NavRight = () => {
         <>
             <div className="column nav-item ">
                 <div>
-                    <p className="flex-top-right">
+                    <p className="flex-top-right home-icon">
                         <Link to="/" className="white-link">Home</Link>
                     </p>
                 </div>
