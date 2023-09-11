@@ -322,6 +322,10 @@ canvas {
     left: 5px;       /* Adjust the right position if needed for mobile */
     top: 5px;      /* Adjust the bottom position if needed for mobile */
   }
+
+  .contact-column {
+    flex: 3;
+  }
 }
 
 .button-bottom-center {
