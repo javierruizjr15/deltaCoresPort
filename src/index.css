@@ -39,31 +39,28 @@ code {
 }
 
 .menu-item {
-  color:whitesmoke;
-  flex: 1;
+  position: fixed;
+  margin-bottom: 20px;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; 
+  font-size: 36px;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  font-size: 36px;
   user-select: none;
-    -webkit-user-select: none;  /* For Safari and Chrome */
-    -moz-user-select: none;     /* For Firefox */
-    -ms-user-select: none;
-    /* font-family: Arial, Helvetica, sans-serif; */
+  -webkit-user-select: none;  /* For Safari and Chrome */
+  -moz-user-select: none;     /* For Firefox */
+  -ms-user-select: none;
+  text-decoration: none;
+  color:whitesmoke;
+  flex: 1;
   font-family: 'Rubik', sans-serif;
   cursor: pointer;
   margin: auto;
-  /* font-size: 5vmin; */
   font-weight: 100;
   transition: font-weight 250ms ease-in-out;
-  text-decoration: none;
-}
-
-.menu-item2 {
-  flex-direction:row;
-  align-items: center;
-  flex-grow: 4;
 }
 
 /* dont need this */
