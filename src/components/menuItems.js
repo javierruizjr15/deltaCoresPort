@@ -8,21 +8,21 @@ const MenuItems = () => {
     return (
         <>
             <div className="menu-items-container"> 
-                <div className="column menu-item">
-                    <p>
+                <div className="menu-item">
+                    <div>
                         <Link to="/about" className="white-link">About</Link>
-                    </p>
-                </div>
-                <div className="column menu-item">
-                    <p>
+                    </div>
+                {/* </div> */}
+                {/* <div className="menu-item2"> */}
+                    <div>
                         <Link to="/work" className="white-link">Work</Link>
-                    </p>
+                    </div>
                     <ExLine />
-                </div>
-                <div className="column menu-item">
-                    <p>
+                {/* </div> */}
+                {/* <div className="menu-item2"> */}
+                    <div>
                         <Link to="/contact" className="white-link">Contact</Link> 
-                    </p>
+                    </div>
                 </div>
             </div>
         </>
