@@ -9,7 +9,7 @@ const Contact = () => {
     return (
         <>
             <Polygon>
-                <div className="home-page">
+                <div>
                     <LogoLeft />
                     <div className="contact-column contact-text">
                         {/* <p className="contact-text-no-ighlight">Contact Javier Ruiz</p> */}

@@ -9,7 +9,7 @@ const About = () => {
     return (
         <>
             <Polygon>
-                <div className="home-page">
+                <div>
                     <LogoLeft />
                     <div className="about-column about-text">
                             <h1>I'm Javier, A Software Engineer</h1>
