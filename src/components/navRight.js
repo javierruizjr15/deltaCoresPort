@@ -14,7 +14,7 @@ const NavRight = () => {
                 </div>
                 <div>
                     <p className="flex-bottom-right audio-icon">
-                        Audio Icon
+                        Audio
                     </p>
                 </div>
             </div>
