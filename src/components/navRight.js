@@ -13,7 +13,7 @@ const NavRight = () => {
                     </p>
                 </div>
                 <div>
-                    <p className="flex-bottom-right">
+                    <p className="flex-bottom-right audio-icon">
                         Audio Icon
                     </p>
                 </div>
