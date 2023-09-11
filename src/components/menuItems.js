@@ -14,9 +14,9 @@ const MenuItems = () => {
                     <Link to="/contact" className="white-link link-spacing">Contact</Link>
                 </div>
             </div>
-            {/* <div className="button-bottom-center">
+            <div className="button-bottom-center">
                 <ExLine />
-            </div> */}
+            </div>
 
         </>
 
