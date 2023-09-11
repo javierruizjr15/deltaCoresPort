@@ -87,6 +87,9 @@ code {
 .white-link {
   color: whitesmoke;
   text-decoration: none;
+}
+
+.link-spacing {
   margin: 0 25px; /* Add left and right margin of 15px */
 }
 
@@ -110,7 +113,7 @@ code {
 
 .flex-top-right {
   align-self: flex-start;
-  /* margin-top: 15px; */
+  margin-top: 15px;
   margin-left: 15px;
 }
 

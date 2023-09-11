@@ -9,9 +9,9 @@ const MenuItems = () => {
         <>
             <div className="menu-items-container"> 
                 <div className="menu-item">
-                    <Link to="/about" className="white-link">About</Link>
-                    <Link to="/work" className="white-link">Work</Link>
-                    <Link to="/contact" className="white-link">Contact</Link>
+                    <Link to="/about" className="white-link link-spacing">About</Link>
+                    <Link to="/work" className="white-link link-spacing">Work</Link>
+                    <Link to="/contact" className="white-link link-spacing">Contact</Link>
                 </div>
             </div>
             <div className="button-bottom-center">
