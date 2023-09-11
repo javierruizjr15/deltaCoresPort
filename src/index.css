@@ -87,6 +87,7 @@ code {
 .white-link {
   color: whitesmoke;
   text-decoration: none;
+  margin: 0 25px; /* Add left and right margin of 15px */
 }
 
 .white-link:hover {
@@ -154,7 +155,27 @@ code {
 }
 
 .contact-column {
-  flex: 6;
+  flex: 6; 
+  position: fixed;
+  margin-bottom: 20px;
+  /* bottom: 50%; */
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; 
+  font-size: 36px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-text-no-ighlight {
+  user-select: none;
+}
+
+.about-text, .contact-text {
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+  padding: 15px; /* Add some padding for better design */
+  color: whitesmoke; 
 }
 
 /* (might not need this after all)
@@ -254,12 +275,6 @@ canvas {
   right: -15%; /* Adjust this value as per your design needs */
 }
 
-.about-text, .contact-text {
-    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
-    padding: 15px; /* Add some padding for better design */
-    color: whitesmoke; 
-}
-
 .bar {
   width: 100px; /* Initial width */
   height: 10px;
@@ -318,6 +333,3 @@ canvas {
   z-index: 100; /* Ensures it's on top */
 }
 
-.link-spacing {
-  margin: 0 25px; /* Add left and right margin of 15px */
-}

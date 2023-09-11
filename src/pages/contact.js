@@ -11,10 +11,10 @@ const Contact = () => {
             <Polygon>
                 <div className="home-page">
                     <LogoLeft />
-                    <div className="column menu-item contact-column contact-text">
-                        <h1>Please contact me for software engineering services</h1>
+                    <div className="contact-column contact-text">
+                        <h1 className="contact-text-no-ighlight">Please contact me for software engineering services</h1>
                         <p>
-                         Email: javierruizjr15@gmail.com
+                         <span className="contact-text-no-ighlight">Email: </span>javierruizjr15@gmail.com
                         </p>
                     </div>
                     <NavRight />
