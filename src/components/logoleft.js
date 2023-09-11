@@ -6,7 +6,7 @@ const LogoLeft = () => {
     
     return (
         <>
-                <div className="column">
+                <div>
                     <div className="flex-top-left"> 
                         <div className="logo-icon">
                             <img 
