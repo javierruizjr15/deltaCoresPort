@@ -172,7 +172,7 @@ code {
 }
 
 .about-column {
-  flex: 6; 
+  /* flex: 6;  */
   position: fixed;
   margin-bottom: 20px;
   /* bottom: 50%; */
@@ -183,6 +183,10 @@ code {
   font-size: 24px;
   justify-content: center;
   align-items: center;
+  width: 70%; /* Make it 80% of the parent container's width */
+  max-width: 1200px; /* Set a max-width so it doesn't get too wide on large screens */
+  margin: 0 auto; /* This will center the div if its width is less than the parent's width */
+
 }
 
 .contact-text-no-highlight.about-text-no-highlight {
