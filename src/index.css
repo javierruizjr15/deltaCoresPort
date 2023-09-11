@@ -171,6 +171,20 @@ code {
   align-items: center;
 }
 
+.about-column {
+  flex: 6; 
+  position: fixed;
+  margin-bottom: 20px;
+  /* bottom: 50%; */
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; 
+  font-size: 36px;
+  justify-content: center;
+  align-items: center;
+}
+
 .contact-text-no-highlight.about-text-no-highlight {
   user-select: none;
 }
