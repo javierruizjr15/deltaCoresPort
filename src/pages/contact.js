@@ -12,7 +12,7 @@ const Contact = () => {
                 <div className="home-page">
                     <LogoLeft />
                     <div className="contact-column contact-text">
-                        <h1 className="contact-text-no-ighlight">Please contact me for software engineering services</h1>
+                        {/* <p className="contact-text-no-ighlight">Contact Javier Ruiz</p> */}
                         <p>
                          <span className="contact-text-no-ighlight">Email: </span>javierruizjr15@gmail.com
                         </p>
