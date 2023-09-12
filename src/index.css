@@ -186,7 +186,14 @@ code {
   width: 70%; /* Make it 80% of the parent container's width */
   max-width: 1200px; /* Set a max-width so it doesn't get too wide on large screens */
   margin: 0 auto; /* This will center the div if its width is less than the parent's width */
+}
 
+.p-pad {
+  margin-top: 20px;
+}
+
+.header-text {
+  font-size: 32px;
 }
 
 .contact-text-no-highlight.about-text-no-highlight {
@@ -351,6 +358,10 @@ canvas {
   .about-column {
     /* flex: none; */
     font-size: 14px;   /* Adjust the font-size if needed for mobile */
+  }
+
+  .header-text {
+    font-size: 16px;
   }
 }
 
