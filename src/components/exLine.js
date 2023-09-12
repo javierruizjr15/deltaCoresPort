@@ -34,6 +34,16 @@ const ExLine = () => {
         }, 3000);
     }
 
+    const handleTouchStart = (e) => {
+        e.preventDefault(); // Prevent mouse events from firing simultaneously
+        handleMouseDown();
+    };
+
+    const handleTouchEnd = (e) => {
+        e.preventDefault(); // Prevent mouse events from firing simultaneously
+        handleMouseUp();
+    };
+
     const handleMouseUp = () => {
         setShowLine(false);
         expandingRef.current = false;
@@ -56,7 +66,13 @@ const ExLine = () => {
             {/* onMouseDown={handleMouseDown} 
             onMouseUp={handleMouseUp} 
             onMouseLeave={handleMouseUp} */}
-                <button className="btn btn-dark" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+                <button className="btn btn-dark" 
+                        onMouseDown={handleMouseDown} 
+                        onMouseUp={handleMouseUp}  
+                        onMouseLeave={handleMouseUp}
+                        onTouchStart={handleTouchStart} 
+                        onTouchEnd={handleTouchEnd}
+                >
                     Click and Hold
                 </button> 
             {showLine && (
