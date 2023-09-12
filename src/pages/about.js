@@ -9,11 +9,11 @@ const About = () => {
     return (
         <>
             <Polygon>
-                <div>
+                <div className="home=page">
                     <LogoLeft />
                     <div className="about-column about-text">
                             <p className="header-text">I'm Javier, A Software Engineer.</p>
-                            <p className="p-pad">I am a software engineer with over 3 years of programming experience.<br />
+                            <p className="p-pad">I have over 3 years of programming experience.<br />
                                 I hold a Masters of Science Computer Science with a Bachelors of Science Electrical Engineering. <br />     
                                 I have experience building, testing, and deploying web applications with React library in a MERN stack. <br />
                                 I am seeking front end developer positions working with React, JavaScript, HTML, CSS, WebGL, Flexbox, and JSX. <br /> 
