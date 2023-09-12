@@ -149,9 +149,9 @@ code {
   height: 100%;
 }
 
-.about-column {
+/* .about-column {
   flex: 6;
-}
+} */
 
 .work-column {
   flex: 6;
@@ -185,6 +185,22 @@ code {
   align-items: center;
   width: 70%; /* Make it 80% of the parent container's width */
   max-width: 1200px; /* Set a max-width so it doesn't get too wide on large screens */
+  margin: 0 auto; /* This will center the div if its width is less than the parent's width */
+}
+
+.work-column {
+  /* flex: 6;  */
+  position: fixed;
+  margin-bottom: 20px;
+  /* bottom: 50%; */
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; 
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Make it 80% of the parent container's width */
+  max-width: 900px; /* Set a max-width so it doesn't get too wide on large screens */
   margin: 0 auto; /* This will center the div if its width is less than the parent's width */
 }
 
@@ -287,12 +303,17 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75vh;    /* 75% of the viewport height */
-  width: 100vh;     /* Make it a square using vh units for width */
+  height: auto;    /* 75% of the viewport height */
+  width: auto;     /* Make it a square using vh units for width */
   margin: auto;    /* Auto margins help centering */
   position: absolute; /* To perfectly center using top, right, bottom, left */
   top: 0; right: 0; bottom: 0; left: 0;
   /* overflow: hidden; */
+}
+
+.carousel-inner img {
+  max-width: 100%;
+  height: auto;  /* maintain aspect ratio */
 }
 
 .carousel-control-prev {
@@ -363,6 +384,11 @@ canvas {
   .header-text {
     font-size: 16px;
   }
+
+  .carousel-container {
+    height: auto;
+    width: auto;
+}
 }
 
 .button-bottom-center {

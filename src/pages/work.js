@@ -13,7 +13,7 @@ const Work = () => {
             <BackgroundSlider>
                 <div className="home-page">
                     <LogoLeft />
-                    <div className="column menu-item work-column">
+                    <div className="work-column">
                        <Carousel />
                     </div>
                     <NavRight />
