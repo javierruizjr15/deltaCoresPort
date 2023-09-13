@@ -147,6 +147,10 @@ let scene,
 
 
 
+
+
+
+
 // new code: component created, but image appears without annimation
 import React, { Component } from 'react';
 import * as THREE from 'three';
