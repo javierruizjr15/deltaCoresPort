@@ -9,13 +9,13 @@ const NavRight = () => {
             <div>
                 <div>
                     <p className="flex-top-right home-icon">
-                        <Link to="/" className="white-link">Home</Link>
+                        <Link to="/" className="white-link">Audio</Link>
                     </p>
                 </div>
                 <div>
-                    <p className="flex-bottom-right audio-icon white-link">
+                    {/* <p className="flex-bottom-right audio-icon white-link">
                         Audio
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </>
