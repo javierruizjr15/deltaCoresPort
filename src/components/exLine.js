@@ -26,12 +26,12 @@ const ExLine = () => {
         setWidth(0);
         expandLine();
         
-        // Navigate to a random route after 3 seconds
+        // Navigate to a random route after 2 seconds
         stopRef.current = setTimeout(() => {
             expandingRef.current = false;
             const randomRoute = routes[Math.floor(Math.random() * routes.length)];
             navigate(randomRoute);
-        }, 3000);
+        }, 1900);
     }
 
     const handleTouchStart = (e) => {
@@ -66,19 +66,10 @@ const ExLine = () => {
             {/* onMouseDown={handleMouseDown} 
             onMouseUp={handleMouseUp} 
             onMouseLeave={handleMouseUp} */}
-                <button className="btn btn-dark" 
-                        onMouseDown={handleMouseDown} 
-                        onMouseUp={handleMouseUp}  
-                        onMouseLeave={handleMouseUp}
-                        onTouchStart={handleTouchStart} 
-                        onTouchEnd={handleTouchEnd}
-                >
-                    Click and Hold
-                </button> 
             {showLine && (
                 <div 
                     style={{
-                        marginTop: '10px',
+                        marginBottom: '10px',
                         width: `${width}px`,
                         height: '2px',
                         backgroundColor: 'white',
@@ -87,6 +78,15 @@ const ExLine = () => {
                     }}
                 ></div>
             )}
+                        <button className="btn btn-dark" 
+                                onMouseDown={handleMouseDown} 
+                                onMouseUp={handleMouseUp}  
+                                onMouseLeave={handleMouseUp}
+                                onTouchStart={handleTouchStart} 
+                                onTouchEnd={handleTouchEnd}
+                        >
+                            Click and Hold
+                        </button> 
         </div>
     );
 }
