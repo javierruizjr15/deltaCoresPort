@@ -158,6 +158,10 @@
 // import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 import React, { Component } from 'react';
+import './assets/sphereShader/cdnjs.cloudflare.com_ajax_libs_simplex-noise_2.4.0_simplex-noise.min.js';
+import './assets/sphereShader/cdnjs.cloudflare.com_ajax_libs_three.js_90_three.min.js';
+import './assets/sphereShader/unpkg.com_three@0.90.0_examples_js_controls_OrbitControls.js';
+
 
 
 
