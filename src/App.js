@@ -11,7 +11,7 @@ import Platonics from "./components/platonics";
 // import Carousel from "./components/carousel";
 import RefractedRays from "./components/refractedRays";
 import RotationalSpaceMod from "./components/rotationalSpaceMod";
-import FreyaFalls from "./components/freyaFalls.js";
+// import FreyaFalls from "./components/freyaFalls.js";
 // import ReactionWaves from "./components/reactionWaves";
 // import Pokeballs from "./components/infinitePokeballs";
 import Freymoji from "./components/freymoji";
@@ -32,7 +32,7 @@ const App = () => {
           <Route path="/freymoji" element={<Freymoji />} /> 
           {/* <Route path="/pokeballs" element={<Pokeballs />} />  */}
           {/* <Route path="/reactionwaves" element={<ReactionWaves />} />  */}
-          <Route path="/freyafalls" element={<FreyaFalls />} /> 
+          {/* <Route path="/freyafalls" element={<FreyaFalls />} />  */}
           <Route path="/refractedrays" element={<RefractedRays />} /> 
           <Route path="/rotationalspacemod" element={<RotationalSpaceMod />} /> 
           <Route path="/" element={<Home />} /> 
