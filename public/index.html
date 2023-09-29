@@ -35,46 +35,6 @@
   <body>
     <!-- <div id="WebGL-output"></div> -->
   
-    <!-- <script id="vs" type="x-shader/x-vertex">
-			attribute float displacement;
-			varying vec3 vNormal;
-			varying vec2 vUv;
-			uniform float textureAmplitude;
-
-			void main() {
-        
-				vec3 tempPos = position + normal * vec3(displacement);
-				gl_Position = projectionMatrix * modelViewMatrix * vec4( tempPos, 1.0 );
-        
-				vNormal = normal;
-        
-				vUv = uv + vec2( textureAmplitude );
-        
-			}
-		</script>
-
-		<script id="fs" type="x-shader/x-fragment">
-			uniform vec3 color;
-			uniform sampler2D texture;
-			varying vec3 vNormal;
-			varying vec2 vUv;
-
-			void main() {
-
-				vec3 lightPos = vec3( 1.0, 1.0, 0.0 );
-				lightPos = normalize( lightPos );
-
-				float brightness = dot( vNormal, lightPos ) * 0.5 + 0.5 + 0.3;
-
-				vec4 tcolor = texture2D( texture, vUv );
-
-				gl_FragColor =  brightness * tcolor * vec4( color, 1.0 );
-        
-			}
-		</script> -->
- 
-  
-
     <!-- partial -->
     <script  src="../src/components/sphereShader.js"></script>
   
