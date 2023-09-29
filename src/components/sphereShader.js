@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
 
 //og code
@@ -48,6 +49,9 @@ let scene,
      simplexNoiseArr;
 
  const simplexNoise = new SimplexNoise();
+//  const THREE = window.three;
+//  const texture = window.texture;
+
 
  const render = () => {
      let timeStamp = Date.now() * 0.01;
