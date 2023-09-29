@@ -11,15 +11,16 @@ const Home = () => {
         
     return (
         <>
-            <body id="body">
+        <Polygon>
+            {/* <body id="body">
                 <div id="WebGL-output"></div>
-            </body>
+            </body> */}
                 <div className="home-page">
                     <LogoLeft />
                     <MenuItems />
                     <NavRight />
                 </div>
-
+            </Polygon>
         </>
 
     );
