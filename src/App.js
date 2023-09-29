@@ -16,6 +16,7 @@ import RotationalSpaceMod from "./components/rotationalSpaceMod";
 // import Pokeballs from "./components/infinitePokeballs";
 import Freymoji from "./components/freymoji";
 import ExLine from "./components/exLine";
+import SphereShader from "./components/sphereShader";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Routes>
           {/* <Route path="/carousel" element={<Carousel />} />  */}
           {/* <Route path="/polygon" element={<Polygon />} />  */}
+          <Route path="/sphereshader" element={<SphereShader />} /> 
           <Route path="/platonics" element={<Platonics />} /> 
           {/* <Route path="/tester" element={<Tester />} />  */}
           <Route path="/exline" element={<ExLine />} /> 
