@@ -8,9 +8,9 @@ const NavRight = () => {
         <>
             <div>
                 <div>
-                    <p className="flex-top-right home-icon">
+                    {/* <p className="flex-top-right home-icon">
                         <Link to="/" className="white-link">Audio</Link>
-                    </p>
+                    </p> */}
                 </div>
                 <div>
                     {/* <p className="flex-bottom-right audio-icon white-link">
