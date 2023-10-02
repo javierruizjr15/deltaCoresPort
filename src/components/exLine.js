@@ -17,7 +17,7 @@ const ExLine = () => {
         // "/reactionwaves",
         // "/freyafalls",
         "/rayspage",
-        "/rotationalspacemod"
+        "/spacemodpage"
     ];
 
     const handleMouseDown = () => {
