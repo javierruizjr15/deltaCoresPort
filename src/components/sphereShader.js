@@ -1,4 +1,5 @@
-
+/* eslint-disable no-undef */
+// import SimplexNoise from 'simplex-noise';
 
 
 //og code
@@ -47,6 +48,8 @@ let scene,
      orbitControls, 
      sphereMesh,
      simplexNoiseArr;
+
+//  const SimplexNoise = require('simplex-noise');
 
  const simplexNoise = new SimplexNoise();
 

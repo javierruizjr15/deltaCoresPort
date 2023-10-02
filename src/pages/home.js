@@ -5,22 +5,22 @@ import MenuItems from "../components/menuItems";
 import NavRight from "../components/navRight";
 // import Platonics from "../components/platonics";
 import Polygon from "../components/polygon";
+import "../components/sphereShader"
 
 const Home = () => {
     
         
     return (
         <>
-        <Polygon>
-            {/* <body id="body">
+        {/* <Polygon> */}
+            {/* <body id="body"> */}
                 <div id="WebGL-output"></div>
-            </body> */}
                 <div className="home-page">
                     <LogoLeft />
                     <MenuItems />
                     <NavRight />
                 </div>
-            </Polygon>
+            {/* </Polygon> */}
         </>
 
     );
