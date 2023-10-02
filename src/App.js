@@ -16,7 +16,7 @@ import RotationalSpaceMod from "./components/rotationalSpaceMod";
 // import Pokeballs from "./components/infinitePokeballs";
 import Freymoji from "./components/freymoji";
 import ExLine from "./components/exLine";
-import "./components/sphereShader";
+// import "./components/sphereShader";
 
 const App = () => {
   return (
