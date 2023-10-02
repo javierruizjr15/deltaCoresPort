@@ -16,7 +16,7 @@ const ExLine = () => {
         // "/pokeballs",
         // "/reactionwaves",
         // "/freyafalls",
-        "/refractedrays",
+        "/rayspage",
         "/rotationalspacemod"
     ];
 

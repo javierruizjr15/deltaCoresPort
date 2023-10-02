@@ -17,6 +17,7 @@ import RotationalSpaceMod from "./components/rotationalSpaceMod";
 import Freymoji from "./components/freymoji";
 import ExLine from "./components/exLine";
 // import "./components/sphereShader";
+import RefractedRaysPage from "./pages/refractedRaysPage";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           {/* <Route path="/carousel" element={<Carousel />} />  */}
           {/* <Route path="/polygon" element={<Polygon />} />  */}
           {/* <Route path="/sphereshader" element={<SphereShader />} />  */}
+          <Route path="/rayspage" element={<RefractedRaysPage />} /> 
           <Route path="/platonics" element={<Platonics />} /> 
           {/* <Route path="/tester" element={<Tester />} />  */}
           <Route path="/exline" element={<ExLine />} /> 

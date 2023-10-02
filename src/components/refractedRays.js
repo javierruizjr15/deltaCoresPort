@@ -925,8 +925,9 @@ const FRAGMENT_SHADER = `
     }
 `
 
-const RefractedRays = () => {
-    const canvasRef = useRef(null);
+const RefractedRays = ({ children }) => {
+    
+  const canvasRef = useRef(null);
 
     useEffect(() => {
     if (!canvasRef.current) return;
@@ -1026,8 +1027,15 @@ const RefractedRays = () => {
 
     }, []);
 
-    return <canvas id="webgl" ref={canvasRef}></canvas>;
-}
+    return (
+      <div style={{ position: 'relative' }}>
+        <canvas id="webgl" ref={canvasRef}></canvas>
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+          {children}
+        </div>
+      </div>
+    );
+};
     
 
 export default RefractedRays;
