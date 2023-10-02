@@ -5,6 +5,7 @@ import MenuItems from "../components/menuItems";
 import NavRight from "../components/navRight";
 // import Platonics from "../components/platonics";
 import Polygon from "../components/polygon";
+// import "../components/sphereShader"
 
 const Home = () => {
     
@@ -15,11 +16,13 @@ const Home = () => {
                 <div id="WebGL-output"></div>
             </body> */}
             <Polygon>
-                <div className="home-page">
-                    <LogoLeft />
-                    <MenuItems />
-                    <NavRight />
-                </div>
+                {/* <body id="body"> */}
+                    {/* <div id="WebGL-output"></div> */}
+                    <div className="home-page">
+                        <LogoLeft />
+                        <MenuItems />
+                        <NavRight />
+                    </div>
             </Polygon>
 
         </>

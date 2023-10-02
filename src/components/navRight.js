@@ -1,6 +1,6 @@
 import React from "react";
 import '../index.css'; 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const NavRight = () => {
 
@@ -8,14 +8,14 @@ const NavRight = () => {
         <>
             <div>
                 <div>
-                    <p className="flex-top-right home-icon">
-                        <Link to="/" className="white-link">Home</Link>
-                    </p>
+                    {/* <p className="flex-top-right home-icon">
+                        <Link to="/" className="white-link">Audio</Link>
+                    </p> */}
                 </div>
                 <div>
-                    <p className="flex-bottom-right audio-icon white-link">
+                    {/* <p className="flex-bottom-right audio-icon white-link">
                         Audio
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </>

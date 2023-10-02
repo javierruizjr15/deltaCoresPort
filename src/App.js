@@ -16,7 +16,10 @@ import RotationalSpaceMod from "./components/rotationalSpaceMod";
 // import Pokeballs from "./components/infinitePokeballs";
 import Freymoji from "./components/freymoji";
 import ExLine from "./components/exLine";
-// import SphereShader from "./components/sphereShader";
+// import "./components/sphereShader";
+import RefractedRaysPage from "./pages/refractedRaysPage";
+import FreymojiPage from "./pages/freymojiPage";
+import SpaceModePage from "./pages/spaceModPage";
 
 const App = () => {
   return (
@@ -26,6 +29,9 @@ const App = () => {
           {/* <Route path="/carousel" element={<Carousel />} />  */}
           {/* <Route path="/polygon" element={<Polygon />} />  */}
           {/* <Route path="/sphereshader" element={<SphereShader />} />  */}
+          <Route path="/spacemodpage" element={<SpaceModePage />} /> 
+          <Route path="/freymojipage" element={<FreymojiPage />} /> 
+          <Route path="/rayspage" element={<RefractedRaysPage />} /> 
           <Route path="/platonics" element={<Platonics />} /> 
           {/* <Route path="/tester" element={<Tester />} />  */}
           <Route path="/exline" element={<ExLine />} /> 

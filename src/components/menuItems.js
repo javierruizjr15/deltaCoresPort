@@ -8,7 +8,7 @@ const MenuItems = () => {
     return (
         <>
             <div className="menu-items-container"> 
-                <div className="menu-item">
+                <div className="menu-item menu-text">
                     <Link to="/about" className="white-link link-spacing">About</Link>
                     <Link to="/work" className="white-link link-spacing">Work</Link>
                     <Link to="/contact" className="white-link link-spacing">Contact</Link>
