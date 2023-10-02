@@ -17,7 +17,7 @@ const About = () => {
                                 I hold a Masters of Science Computer Science with a Bachelors of Science Electrical Engineering. <br />     
                                 I have experience building, testing, and deploying web applications with React library in a MERN stack. <br />
                                 I am seeking front end developer positions working with React, JavaScript, HTML, CSS, WebGL, Flexbox, and JSX. <br /> 
-                                I love to build cool things and would be honored to build something for you!</p>
+                                I build cool things and would be honored to build something for you!</p>
                     </div>
                         <NavRight />
                 </div>
