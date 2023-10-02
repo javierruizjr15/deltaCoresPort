@@ -1,6 +1,3 @@
-/* eslint-disable no-undef */
-// import SimplexNoise from 'simplex-noise';
-
 
 //og code
 
