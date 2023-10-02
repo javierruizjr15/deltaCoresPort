@@ -6,7 +6,8 @@ import DCLogo from '../images//freyaFalls/DCOGW75.png';
 import Moon from '../images/freyaFalls/moon100.png';
 
 
-export const Freymoji = () => {
+// OG code
+export const Freymoji = ({ children }) => {
 
     const VERTEX_SHADER = `#version 300 es
     in vec3 position;
@@ -331,6 +332,13 @@ export const Freymoji = () => {
     
     requestAnimationFrame(run);
 
+  return (
+    <div style={{ position: 'relative' }}>
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+        {children}
+      </div>
+    </div>
+  );
 }
 
 export default Freymoji;

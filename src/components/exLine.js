@@ -12,7 +12,7 @@ const ExLine = () => {
     const navigate = useNavigate(); // Using the navigate function from react-router
 
     const routes = [
-        "/freymoji",
+        "/freymojipage",
         // "/pokeballs",
         // "/reactionwaves",
         // "/freyafalls",
