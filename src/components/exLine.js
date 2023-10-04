@@ -78,12 +78,13 @@ const ExLine = () => {
                     }}
                 ></div>
             )}
-                        <button className="btn btn-dark" 
+                        <button className="btn btn-lg" 
                                 onMouseDown={handleMouseDown} 
                                 onMouseUp={handleMouseUp}  
                                 onMouseLeave={handleMouseUp}
                                 onTouchStart={handleTouchStart} 
                                 onTouchEnd={handleTouchEnd}
+                                style={{ backgroundColor: 'black', color: 'whitesmoke'}}
                         >
                             Click and Hold
                         </button> 
