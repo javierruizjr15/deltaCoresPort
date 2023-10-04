@@ -396,8 +396,8 @@ canvas {
   }
 
   .profile-img {
-    width: 70px; /* Adjust the width of the profile picture as needed */
-    height: 70px; /* Adjust the height of the profile picture as needed */
+    width: 40px; /* Adjust the width of the profile picture as needed */
+    height: 40px; /* Adjust the height of the profile picture as needed */
     border-radius: 50%; /* Make the image circular if desired */
   }
 
