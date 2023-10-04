@@ -393,7 +393,7 @@ canvas {
 
 .button-bottom-center {
   position: fixed;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%); /* Centers the button horizontally */
