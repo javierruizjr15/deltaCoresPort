@@ -402,7 +402,8 @@ canvas {
   }
 
   .profile-picture {
-    top: 11px; /* Adjust the top distance as needed */
+    position: fixed;
+    top: 8px; /* Adjust the top distance as needed */
     right: 8px;
 }
 }
