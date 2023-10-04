@@ -405,3 +405,15 @@ canvas {
   z-index: 100; /* Ensures it's on top */
 }
 
+.profile-picture {
+  position: absolute;
+  top: 20px; /* Adjust the top distance as needed */
+  right: 20px; /* Adjust the right distance as needed */
+}
+
+.profile-img {
+  width: 100px; /* Adjust the width of the profile picture as needed */
+  height: 100px; /* Adjust the height of the profile picture as needed */
+  border-radius: 50%; /* Make the image circular if desired */
+}
+

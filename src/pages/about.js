@@ -11,6 +11,9 @@ const About = () => {
             <Polygon>
                 <div className="home=page">
                     <LogoLeft />
+                    <div className="profile-picture">
+                        <img src={require("../images/circleProfile.png")} alt="Javier Ruiz Profile" className="profile-img" />
+                    </div>
                     <div className="about-column about-text">
                             <p className="header-text">I am Javier Ruiz, a seasoned Software Engineer,</p>
                             <p className="p-pad">
