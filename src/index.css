@@ -137,8 +137,8 @@ code {
 
 .logo-icon {
   position: fixed;  /* Fix the position */
-  left: 15px;      /* 15px from the right */
-  top: 15px;     /* 15px from the bottom */
+  left: 20px;      /* 15px from the right */
+  top: 20px;     /* 15px from the bottom */
 }
 
 .text-effect-canvas {
@@ -186,6 +186,8 @@ code {
   width: 70%; /* Make it 80% of the parent container's width */
   max-width: 1200px; /* Set a max-width so it doesn't get too wide on large screens */
   margin: 0 auto; /* This will center the div if its width is less than the parent's width */
+  max-height: calc(100vh - 200px); /* Adjust the height as needed */
+  overflow-y: auto;
 }
 
 .work-column {
@@ -368,8 +370,8 @@ canvas {
 
   .logo-icon {
     /* font-size: 14px;   Adjust the font-size if needed for mobile */
-    left: 5px;       /* Adjust the right position if needed for mobile */
-    top: 5px;      /* Adjust the bottom position if needed for mobile */
+    left: 10px;       /* Adjust the right position if needed for mobile */
+    top: 16px;      /* Adjust the bottom position if needed for mobile */
   }
 
   .contact-column {
@@ -379,6 +381,9 @@ canvas {
   .about-column {
     /* flex: none; */
     font-size: 14px;   /* Adjust the font-size if needed for mobile */
+    max-height: calc(100vh - 200px); /* Adjust the height as needed */
+    overflow-y: auto;
+    
   }
 
   .header-text {
@@ -388,15 +393,39 @@ canvas {
   .carousel-container {
     height: auto;
     width: auto;
+  }
+
+  .profile-img {
+    width: 70px; /* Adjust the width of the profile picture as needed */
+    height: 70px; /* Adjust the height of the profile picture as needed */
+    border-radius: 50%; /* Make the image circular if desired */
+  }
+
+  .profile-picture {
+    position: fixed;
+    top: 11px; /* Adjust the top distance as needed */
+    right: 8px;
 }
 }
 
 .button-bottom-center {
   position: fixed;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%); /* Centers the button horizontally */
   z-index: 100; /* Ensures it's on top */
+}
+
+.profile-picture {
+  position: fixed;
+  top: 20px; /* Adjust the top distance as needed */
+  right: 20px; /* Adjust the right distance as needed */
+}
+
+.profile-img {
+  width: 75px; /* Adjust the width of the profile picture as needed */
+  height: 75px; /* Adjust the height of the profile picture as needed */
+  border-radius: 50%; /* Make the image circular if desired */
 }
 

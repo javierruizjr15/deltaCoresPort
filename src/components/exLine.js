@@ -31,7 +31,7 @@ const ExLine = () => {
             expandingRef.current = false;
             const randomRoute = routes[Math.floor(Math.random() * routes.length)];
             navigate(randomRoute);
-        }, 1900);
+        }, 1500);
     }
 
     const handleTouchStart = (e) => {

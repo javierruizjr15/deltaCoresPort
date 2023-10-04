@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import grain1 from '../images/_bg_grain_01.jpg';
+import grain2 from '../images/_bg_grain_02.jpg';
+import grain3 from '../images/_bg_grain_03.jpg';
 
 class BackgroundSlider extends Component {
     state = {
@@ -6,9 +9,9 @@ class BackgroundSlider extends Component {
     };
 
     images = [
-        '/textures/_bg_grain_01.jpg',
-        '/textures/_bg_grain_02.jpg',
-        '/textures/_bg_grain_03.jpg',
+        grain1,
+        grain2,
+        grain3,
     ];
 
     componentDidMount() {
