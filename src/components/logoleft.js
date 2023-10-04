@@ -1,6 +1,6 @@
 import React from "react";
 import '../index.css'; 
-import deltacoreslogo from "../images/DCOGW1.png";
+import deltacoreslogo from "../images/DCOGW2.png";
 import { Link } from 'react-router-dom';
 
 const LogoLeft = () => {
@@ -14,7 +14,7 @@ const LogoLeft = () => {
                         <img 
                             src={deltacoreslogo} 
                             alt="delta cores logo" 
-                            style={{width: "70px", height: "100px" }} 
+                            style={{width: "70px", height: "65px" }} 
                         /> 
                     </Link>
                 </div>
