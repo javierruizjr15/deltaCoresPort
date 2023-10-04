@@ -369,7 +369,7 @@ canvas {
   .logo-icon {
     /* font-size: 14px;   Adjust the font-size if needed for mobile */
     left: 8px;       /* Adjust the right position if needed for mobile */
-    top: 9px;      /* Adjust the bottom position if needed for mobile */
+    top: 11px;      /* Adjust the bottom position if needed for mobile */
   }
 
   .contact-column {
