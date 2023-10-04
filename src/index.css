@@ -137,8 +137,8 @@ code {
 
 .logo-icon {
   position: fixed;  /* Fix the position */
-  left: 15px;      /* 15px from the right */
-  top: 15px;     /* 15px from the bottom */
+  left: 20px;      /* 15px from the right */
+  top: 20px;     /* 15px from the bottom */
 }
 
 .text-effect-canvas {
@@ -368,8 +368,8 @@ canvas {
 
   .logo-icon {
     /* font-size: 14px;   Adjust the font-size if needed for mobile */
-    left: 5px;       /* Adjust the right position if needed for mobile */
-    top: 5px;      /* Adjust the bottom position if needed for mobile */
+    left: 7px;       /* Adjust the right position if needed for mobile */
+    top: 7px;      /* Adjust the bottom position if needed for mobile */
   }
 
   .contact-column {
