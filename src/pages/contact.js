@@ -30,7 +30,7 @@ const Contact = () => {
                           <GithubOutlined />
                          </span> 
                          <span className="contact-icon-value">
-                          <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap'}}>www.github.com/javierruizjr15</a>
+                          <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap'}}>github.com/javierruizjr15</a>
                          </span>
                         </p>
                         <p className="contact-icon">
@@ -38,7 +38,7 @@ const Contact = () => {
                           <LinkedinOutlined /> 
                          </span> 
                          <span className="contact-icon-value">
-                          <a href={linkedinLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap'}}>www.linkedin.com/in/javier-ruiz-jr</a>
+                          <a href={linkedinLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap'}}>linkedin.com/in/javier-ruiz-jr</a>
                          </span>
                         </p>
                     </div>
