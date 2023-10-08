@@ -7,8 +7,8 @@ import { GithubOutlined, MailOutlined, LinkedinOutlined } from "@ant-design/icon
 
 const Contact = () => {
     const emailLink = "javierruizjr15@gmail.com"
-    const githubLink =  "www.github.com/javierruizjr15"
-    const linkedinLink = "www.linkedin.com/in/javier-ruiz-jr"
+    const githubLink =  "https://github.com/javierruizjr15"
+    const linkedinLink = "https://www.linkedin.com/in/javier-ruiz-jr/"
 
 
     return (
