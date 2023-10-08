@@ -22,7 +22,7 @@ const Contact = () => {
                           <MailOutlined />
                          </span> 
                          <span className="contact-icon-value">
-                          <a href={`mailto:${emailLink}`} style={{ textDecoration: 'none', color: 'inherit' }}>{emailLink}</a>
+                          <a href={`mailto:${emailLink}`} style={{ textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap'}}>{emailLink}</a>
                          </span>
                         </p>
                         <p className="contact-icon">
@@ -30,7 +30,7 @@ const Contact = () => {
                           <GithubOutlined />
                          </span> 
                          <span className="contact-icon-value">
-                          <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>www.github.com/javierruizjr15</a>
+                          <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap'}}>www.github.com/javierruizjr15</a>
                          </span>
                         </p>
                         <p className="contact-icon">
@@ -38,7 +38,7 @@ const Contact = () => {
                           <LinkedinOutlined /> 
                          </span> 
                          <span className="contact-icon-value">
-                          <a href={linkedinLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>www.linkedin.com/in/javier-ruiz-jr</a>
+                          <a href={linkedinLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap'}}>www.linkedin.com/in/javier-ruiz-jr</a>
                          </span>
                         </p>
                     </div>
