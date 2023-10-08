@@ -27,7 +27,7 @@ const Contact = () => {
                         </p>
                         <p className="contact-icon">
                          <span className="contact-text-no-highlight">
-                          <GithubOutlined /> <br />
+                          <GithubOutlined />
                          </span> 
                          <span className="contact-icon-value">
                           <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>www.github.com/javierruizjr15</a>
