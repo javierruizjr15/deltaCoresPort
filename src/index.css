@@ -167,8 +167,8 @@ code {
   transform: translateX(-50%);
   z-index: 100; 
   font-size: 36px;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .about-column {
@@ -222,6 +222,17 @@ code {
   background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
   padding: 15px; /* Add some padding for better design */
   color: whitesmoke; 
+  text-align: center;
+}
+
+.contact-icon {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.contact-icon-value {
+  margin-left:  20px;
 }
 
 /* (might not need this after all)
